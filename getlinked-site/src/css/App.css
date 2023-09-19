@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Clash Display", sans-serif;
+  background: #150E28;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 5rem;
+  border: solid 1px white;
+}
+nav .links-action-container {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  align-items: center;
+  column-gap: 7rem;
+}
+nav .links-action-container .links {
+  display: flex;
+  column-gap: 4rem;
+}
+nav .links-action-container .links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+nav .links-action-container button {
+  background: linear-gradient(270deg, #903AFF 0%, #FE34B9 100%);
+  color: white;
+  font-size: 1rem;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 0.25rem;
+}
+
+.company-name {
+  font-size: 2.25rem;
+}
+.company-name span:nth-of-type(1) {
+  color: white;
+}
+.company-name span:nth-of-type(2) {
+  color: #D434FE;
+}
+
+/*# sourceMappingURL=App.css.map */
