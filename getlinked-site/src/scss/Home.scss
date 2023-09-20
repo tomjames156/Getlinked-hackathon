@@ -1,6 +1,7 @@
 $heading: #D434FE;
 $heading2: #FF26B9;
 $border: #FFFFFF2E;
+$background: #150E28;
 
 main{
     width: 100%;
@@ -10,6 +11,10 @@ main{
 
 .highlight{
     color: $heading;
+}
+
+.bold{
+    font-weight: 700;
 }
 
 .hero{
@@ -188,7 +193,55 @@ main{
 }
 
 
-section{
+.questions{
     @extend .intro;
     flex-direction: row-reverse;
+    align-items: flex-start;
+
+    .text-container{
+
+        > p{
+            padding-right: 5rem;
+        }
+    }
+
+    .image-container{
+        img{
+            margin-top: -1rem;
+        }
+    }
+
+    .faq-item{
+        color: white;
+        font-family: Montserrat, sans-serif;
+
+        > div:nth-of-type(1){
+            display: flex;
+            align-items: center;
+            column-gap: 2rem;
+            cursor: pointer;
+            padding: 0.75rem 0;
+            border-bottom: solid 1px $heading;
+
+            .question{
+                font-size: 1rem;
+                line-height: 1.7rem;
+            }
+
+            .symbol{
+                font-size: 1.75rem;
+                color: $heading;
+            }
+        }  
+
+        > div:nth-of-type(2){
+            
+            .answer{
+                padding: 1rem 0.5rem;
+                background: darken($background, 2);
+                border-bottom-left-radius: 0.5rem;
+                border-bottom-right-radius: 0.5rem;
+            }
+        }
+    }
 }

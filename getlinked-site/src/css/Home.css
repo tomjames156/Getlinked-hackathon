@@ -8,6 +8,10 @@ main {
   color: #D434FE;
 }
 
+.bold {
+  font-weight: 700;
+}
+
 .hero {
   color: white;
   border-bottom: solid 1px rgba(255, 255, 255, 0.1803921569);
@@ -100,33 +104,33 @@ main {
   font-family: Montserrat, sans-serif;
 }
 
-.intro, section, .judging, .rules {
+.intro, .questions, .judging, .rules {
   display: flex;
   align-items: center;
   padding: 4rem;
   column-gap: 8rem;
 }
-.intro .text-container, section .text-container, .judging .text-container, .rules .text-container {
+.intro .text-container, .questions .text-container, .judging .text-container, .rules .text-container {
   flex: 50%;
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
 }
-.intro .text-container p, section .text-container p, .judging .text-container p, .rules .text-container p {
+.intro .text-container p, .questions .text-container p, .judging .text-container p, .rules .text-container p {
   font-family: Montserrat, sans-serif;
   color: white;
   font-size: 1rem;
   line-height: 1.7rem;
 }
-.intro .text-container h2, section .text-container h2, .judging .text-container h2, .rules .text-container h2 {
+.intro .text-container h2, .questions .text-container h2, .judging .text-container h2, .rules .text-container h2 {
   font-family: Clash Display, sans-serif;
   color: white;
   font-size: 2.2rem;
 }
-.intro .image-container, section .image-container, .judging .image-container, .rules .image-container {
+.intro .image-container, .questions .image-container, .judging .image-container, .rules .image-container {
   flex: 50%;
 }
-.intro .image-container img, section .image-container img, .judging .image-container img, .rules .image-container img {
+.intro .image-container img, .questions .image-container img, .judging .image-container img, .rules .image-container img {
   width: 100%;
   height: auto;
 }
@@ -150,8 +154,41 @@ main {
   margin-top: 2rem;
 }
 
-section {
+.questions {
   flex-direction: row-reverse;
+  align-items: flex-start;
+}
+.questions .text-container > p {
+  padding-right: 5rem;
+}
+.questions .image-container img {
+  margin-top: -1rem;
+}
+.questions .faq-item {
+  color: white;
+  font-family: Montserrat, sans-serif;
+}
+.questions .faq-item > div:nth-of-type(1) {
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+  cursor: pointer;
+  padding: 0.75rem 0;
+  border-bottom: solid 1px #D434FE;
+}
+.questions .faq-item > div:nth-of-type(1) .question {
+  font-size: 1rem;
+  line-height: 1.7rem;
+}
+.questions .faq-item > div:nth-of-type(1) .symbol {
+  font-size: 1.75rem;
+  color: #D434FE;
+}
+.questions .faq-item > div:nth-of-type(2) .answer {
+  padding: 1rem 0.5rem;
+  background: #110b20;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
 }
 
 /*# sourceMappingURL=Home.css.map */

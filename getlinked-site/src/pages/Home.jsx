@@ -10,6 +10,7 @@ import womanSitting from '../assets/images/people/7450159 1.png'
 import peoplePlanning from '../assets/images/people/8046554 1.png'
 import manThinking from '../assets/images/people/cwok_casual_21 1.png'
 import Countdown from '../components/Countdown'
+import FAQItem from '../components/FAQItem'
 
 // Maybe rename images
 
@@ -76,13 +77,21 @@ function Home() {
                 <button className="btn-primary">Read More</button>
             </div>
         </article>
-        <section className='intro'>
+        <section className='questions'>
             <div className='image-container'>
                 <img src={manThinking} alt="animated man sitting on a cloud thinking with question mark" />
             </div>
             <div className='text-container'>
                 <h2>Frequently Asked<br/> <span className='highlight'>Questions</span></h2>
-                <p>We got answers to the questions that you might want to ask about getlinked Hackathon 1.0</p>
+                <p>We got answers to the questions that you might want to ask about <span className='bold'>getlinked Hackathon 1.0</span></p>
+                <div>
+                    <FAQItem/>
+                    <FAQItem/>
+                    <FAQItem/>
+                    <FAQItem/>
+                    <FAQItem/>
+                    <FAQItem/>
+                </div>
             </div>
         </section>
     </main>
