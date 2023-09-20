@@ -85,12 +85,24 @@ function Home() {
                 <h2>Frequently Asked<br/> <span className='highlight'>Questions</span></h2>
                 <p>We got answers to the questions that you might want to ask about <span className='bold'>getlinked Hackathon 1.0</span></p>
                 <div>
-                    <FAQItem/>
-                    <FAQItem/>
-                    <FAQItem/>
-                    <FAQItem/>
-                    <FAQItem/>
-                    <FAQItem/>
+                    <FAQItem 
+                        question={'Can I work on a project I started before the hackathon?'}
+                    />
+                    <FAQItem 
+                        question={'What happens if I need help during the hackathon?'}
+                    />
+                    <FAQItem 
+                        question={"What happens if I don't have an idea for a project?"}
+                    />
+                    <FAQItem 
+                        question={'Can I join a team or do I have to come with one?'}
+                    />
+                    <FAQItem 
+                        question={'What happens after the hackathon ends'}
+                    />
+                    <FAQItem 
+                        question={'Can I work on a project I started before the hackathon?'}
+                    />
                 </div>
             </div>
         </section>
