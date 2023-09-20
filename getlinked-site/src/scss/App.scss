@@ -22,8 +22,9 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem 3rem;
-    border-bottom:  solid 1px #FFFFFF2E;
+    padding: 1.5rem 3rem;
+    background: #150E28;
+    z-index: 7;
     
 
     > div:nth-of-type(1){
@@ -55,16 +56,17 @@ nav{
                 font-size: 1rem;
             }
         }
-
-        button{
-            background: $primary;
-            color: white;
-            font-size: 1rem;
-            padding: 0.75rem 2rem;
-            border: none;
-            border-radius: 0.25rem;
-        }
     }
+}
+
+.btn-primary{
+    background: $primary;
+    color: white;
+    font-size: 1rem;
+    padding: 0.75rem 2rem;
+    border: none;
+    width: fit-content;
+    border-radius: 0.25rem;
 }
 
 .company-name{
@@ -190,7 +192,8 @@ footer{
 
 @media screen and (max-width: 500px) {
     nav{  
-        transition: all ease 500ms;      
+        transition: all ease 500ms;  
+        padding: 2rem 2.5rem;    
 
         div:nth-of-type(1){
             .mobile-nav{
@@ -298,6 +301,30 @@ footer{
             .links{
                 flex-direction: column;
                 row-gap: 1.5rem;
+            }
+        }
+    }
+
+    footer{
+        padding: 4rem 2.5rem 1.5rem 2.5rem;
+
+        .content{
+            display: grid;
+            grid-template-columns: 1fr;
+            row-gap: 2rem;
+
+            .about-summary{
+                display: flex;
+                flex-direction: column;
+                row-gap: 2rem;
+            }
+
+            .useful-links{
+                padding-top: 0;
+            }
+
+            .contact{
+                padding-top: 0;
             }
         }
     }

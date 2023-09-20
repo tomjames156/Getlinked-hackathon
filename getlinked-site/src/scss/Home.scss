@@ -1,9 +1,138 @@
 main{
     width: 100%;
     height: 100%;
-    margin: 50rem 0 3rem 0;
+    margin: 5.855rem 0 3rem 0;
+}
+
+.highlight{
+    color: #D434FE;
+}
+
+.hero{
+    color: white;
+    border-bottom: solid 1px #FFFFFF2E;
+    border-top: solid 1px #FFFFFF2E;
+    background: #140D27;
+    padding-top: 3rem;
+
+    > div:nth-of-type(1){
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-right: 3rem;
+
+        h2{
+            font-family: Montserrat, sans-serif;
+            font-size: 2rem;
+            font-style: italic;
+            text-align: right;
+        }
+
+        img{
+            width: fit-content;
+        }
+    }
+
+    .content{
+        display: flex;
+        align-items: center;
+        padding: 4rem 0 0 4rem;
+
+
+        > div:nth-of-type(1){
+            flex: 60%;
+            display: flex;
+            flex-direction: column;
+            row-gap: 1.5rem;
+            position: relative;
+
+            .hackathon-name{
+
+                h1{
+                    font-family: Clash Display, sans-serif;
+                    font-size: 4rem;
+                    line-height: normal;
+                }
+    
+                .images{
+                    margin-left: 0.5rem;
+                }
+    
+                img:nth-of-type(1){
+                    width: 65px;
+                    margin-bottom: -0.75rem;
+                }
+    
+                img:nth-of-type(2){
+                    width: 40px;
+                }
+            }
+
+            p{
+                line-height: 2.075rem;
+                font-size: 1.2rem;
+                padding-right: 4rem;
+            }
+
+            .countdown{
+                font-size: 3.3rem;
+                font-family: Unica One;
+                margin-top: 5rem;
+
+                span{
+                    font-size: 1rem;
+                    margin-right: 1.5rem;
+                }
+            }
+
+            > img:last-of-type{
+                position: absolute;
+                top: -2.7rem;
+                right: 7.1rem;
+                width: 45px;
+            }
+        }        
+        
+        > div:nth-of-type(2){
+            position: relative;
+
+            img{
+                width: 100%;
+                height: auto;
+            }
+
+            img:not(.ball){
+                filter: grayscale(100%);
+                background-blend-mode: luminosity;
+            }
+
+            .ball{
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0.65;
+                background-blend-mode: hard-light;
+            }
+        }
+
+        p{
+            font-size: 1.25rem;
+            font-family: Montserrat, sans-serif;
+        }
+    }
+}
+
+article{
+    display: flex;
 
     p{
-        color: red;
+        font-family: Montserrat, sans-serif;
+        color: white;
+        font-size: 1rem;
+    }
+    
+    h2{
+        font-family: Clash Display, sans-serif;
+        color: white;
     }
 }
