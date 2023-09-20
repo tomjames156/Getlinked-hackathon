@@ -10,7 +10,7 @@ function FAQItem({question, answer}) {
 
   return (
     // todo check for answers to the questions
-    <div className="faq-item">
+    <li className="faq-item">
         <div onClick={toggleAnswerVisibility}>
             <div className="question">{question}</div>
             <div className="symbol">{showAnswer ? '-' : '+'}</div>
@@ -20,7 +20,7 @@ function FAQItem({question, answer}) {
                 {answer}
             </p>
         </div>
-    </div>
+    </li>
   )
 }
 

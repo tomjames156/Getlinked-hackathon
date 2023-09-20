@@ -11,6 +11,7 @@ import peoplePlanning from '../assets/images/people/8046554 1.png'
 import manThinking from '../assets/images/people/cwok_casual_21 1.png'
 import Countdown from '../components/Countdown'
 import FAQItem from '../components/FAQItem'
+import TimelineItem from '../components/TimelineItem'
 
 // Maybe rename images
 
@@ -84,7 +85,7 @@ function Home() {
             <div className='text-container'>
                 <h2>Frequently Asked<br/> <span className='highlight'>Questions</span></h2>
                 <p>We got answers to the questions that you might want to ask about <span className='bold'>getlinked Hackathon 1.0</span></p>
-                <div>
+                <ul className='faqs'>
                     <FAQItem 
                         question={'Can I work on a project I started before the hackathon?'}
                     />
@@ -103,8 +104,55 @@ function Home() {
                     <FAQItem 
                         question={'Can I work on a project I started before the hackathon?'}
                     />
-                </div>
+                </ul>
             </div>
+        </section>
+        <section className="timeline">
+            <div>
+                <h2>Timeline</h2>
+                <p>Here is the breakdown of the time we anticipate using for the upcoming event.</p>
+            </div>
+            <ul className='timelines'>
+                <TimelineItem 
+                    date={'November 18, 2023'}
+                    activity={'Hackathon Announcement'}
+                    summary={'The getlinked tech hackathon 1.0 is formally announced to the general public and teams begin to get ready to register'}
+                    order={1}
+                />
+                <TimelineItem
+                    date={'November 18, 2023'}
+                    activity={'Teams Registration begins'}
+                    summary={'Interested teams can now show their interest in the getlinked tech hackathon 1.0 2023 by proceeding to register'}
+                    order={2}
+                    reverse={true}
+                />
+                <TimelineItem 
+                    date={'November 18, 2023'}
+                    activity={'Teams Registration ends'}
+                    summary={'Interested Participants are no longer Allowed to register'}
+                    order={3}
+                />
+                <TimelineItem 
+                    date={'November 18, 2023'}
+                    activity={'Announcement of the accepted teams and ideas'}
+                    summary={'All teams whom idea has been accepted into getlinked tech hackathon 1.0 2023 are formally announced'}
+                    order={4}
+                    reverse={true}
+                />
+                <TimelineItem 
+                    date={'November 18, 2023'}
+                    activity={'Getlinked Hackathon 1.0 Offically Begins'}
+                    summary={'Accepted teams can now proceed to build their ground breaking skill driven solutions'}
+                    order={5}
+                />
+                <TimelineItem 
+                    date={'November 18, 2023'}
+                    activity={'Demo Day'}
+                    summary={'Teams get the opportunity to pitch their projects to judges. The winner of the hackathon will also be announced on this day'}
+                    order={6}
+                    reverse={true}
+                />
+            </ul>
         </section>
     </main>
   )

@@ -2,6 +2,7 @@ $heading: #D434FE;
 $heading2: #FF26B9;
 $border: #FFFFFF2E;
 $background: #150E28;
+$gradient_background: linear-gradient(270deg, #903AFF 0%, #D434FE 100%);
 
 main{
     width: 100%;
@@ -194,7 +195,6 @@ main{
     }
 }
 
-
 .questions{
     @extend .intro;
     flex-direction: row-reverse;
@@ -216,6 +216,7 @@ main{
     .faq-item{
         color: white;
         font-family: Montserrat, sans-serif;
+        list-style-type: none;
 
         > div:nth-of-type(1){
             display: flex;
@@ -240,11 +241,142 @@ main{
             transition: all ease 500ms;
             
             .answer{
-                padding: 1rem 0.5rem;
+                padding: 1rem;
                 background: darken($background, 2);
                 border-bottom-left-radius: 0.5rem;
                 border-bottom-right-radius: 0.5rem;
             }
+        }
+    }
+}
+
+.timeline{
+    color: white;
+    padding: 4rem;
+    
+    > div:nth-of-type(1){
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+        align-items: center;
+        text-align: center;
+
+        h2{
+            font-family: Clash Display, sans-serif;
+            font-size: 2.2rem;
+        }
+
+        p{
+            font-family: Montserrat, sans-serif;
+            max-width: 25rem;
+            line-height: 1.7rem;
+        }
+    }
+
+    .timelines{
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+        font-family: Montserrat, sans-serif;
+        padding-top: 9rem;
+
+        .timeline-item{
+            display: flex;
+            column-gap: 4rem;
+            align-items: center;
+
+            .activity-summary{
+                flex: 40%;
+                text-align: right;
+                display: flex;
+                flex-direction: column;
+                row-gap: 1.25rem;
+
+                h3{
+                    font-family: Montserrat, sans-serif;
+                    color: $heading;
+                    font-size: 1.4rem;
+                }
+
+                .summary{
+                    padding: 0;
+                    line-height: 1.7rem;
+                }
+            }
+
+            .order{
+                flex: 20%;
+                padding: 1.5rem 0.65rem;
+                border-radius: 50%;
+                z-index: 4 !important;
+                max-width: fit-content;
+                position: relative;
+                background: $background !important;
+    
+                span{
+                    padding: 0.65rem 1rem;
+                    border-radius: 50%;
+                    background: $gradient_background;
+                    z-index: 5;
+                }
+
+                .line{
+                    position: absolute;
+                    left: 47%;
+                    top: -5rem;
+                    width: 2px;
+                    height: 5rem;
+                    background: #D434FE;
+                    z-index: -1;
+                }
+
+                .line2{
+                    position: absolute;
+                    left: 47%;
+                    bottom: -5rem;
+                    width: 2px;
+                    height: 5rem;
+                    background: #D434FE;
+                    z-index: -1;
+                }
+            }
+
+            > p{
+                flex: 40%;
+                text-align: left;
+                font-weight: bold;
+                color: $heading;
+                font-size: 1.4rem;
+            }
+        }
+
+        .timeline-item.reverse{
+            flex-direction: row-reverse;
+
+            .activity-summary{
+                text-align: left;
+            }
+
+            > p{
+                text-align: right;
+            }
+        }
+
+
+        .timeline-item:nth-of-type(3){
+            margin-top: 1rem;
+        }
+
+        .timeline-item:nth-of-type(4){
+            margin-top: 1rem;
+        }
+
+        .timeline-item:nth-of-type(5){
+            margin-top: 0.25rem;
+        }
+
+        .timeline-item:nth-of-type(6){
+            margin-top: 0.25rem;
         }
     }
 }
