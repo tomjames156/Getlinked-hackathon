@@ -6,6 +6,8 @@ import glitteryBall from '../assets/images/animated/Image 1.png'
 import lightBulb from '../assets/images/animated/Creative 1.png'
 import bigIdea from '../assets/images/animated/the big idea 1.png'
 import pinkLine from '../assets/images/animated/pink-line.png'
+import womanSitting from '../assets/images/people/7450159 1.png'
+import peoplePlanning from '../assets/images/people/8046554 1.png'
 import Countdown from '../components/Countdown'
 
 // Maybe rename images
@@ -39,10 +41,28 @@ function Home() {
             </div>
         </section>
         <article className='intro'>
-            <div>
+            <div className='image-container'>
                 <img src={bigIdea} alt="the big idea light bulb" />
             </div>
-            <div>
+            <div className='text-container'>
+                <h2>Introduction to getlinked<br/> <span className='highlight'>tech Hackathon 1.0</span></h2>
+                <p>Our tech hackathon is a melting pot of visionaries, and its purpose is as clear as day: to shape the future. Whether you're a coding genius, a design maverick, or a concept wizard, you'll have the chance to transform your ideas into reality. Solving real-world problems, pushing the boundaries of technology, and creating solutions that can change the world, that's what we're all about!</p>
+            </div>
+        </article>
+        <article className='rules'>
+            <div className='image-container'>
+                <img src={womanSitting} alt="animated 3d woman sitting using a tablet" />
+            </div>
+            <div className='text-container'>
+                <h2>Rules and<br/> <span className='highlight'>Guidelines</span></h2>
+                <p>Our tech hackathon is a melting pot of visionaries, and its purpose is as clear as day: to shape the future. Whether you're a coding genius, a design maverick, or a concept wizard, you'll have the chance to transform your ideas into reality. Solving real-world problems, pushing the boundaries of technology, and creating solutions that can change the world, that's what we're all about!</p>
+            </div>
+        </article>
+        <article className='judging'>
+            <div className='image-container'>
+                <img src={bigIdea} alt="the big idea light bulb" />
+            </div>
+            <div className='text-container'>
                 <h2>Introduction to getlinked<br/> <span className='highlight'>tech Hackathon 1.0</span></h2>
                 <p>Our tech hackathon is a melting pot of visionaries, and its purpose is as clear as day: to shape the future. Whether you're a coding genius, a design maverick, or a concept wizard, you'll have the chance to transform your ideas into reality. Solving real-world problems, pushing the boundaries of technology, and creating solutions that can change the world, that's what we're all about!</p>
             </div>
