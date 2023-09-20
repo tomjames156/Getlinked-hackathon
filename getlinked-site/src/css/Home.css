@@ -100,42 +100,58 @@ main {
   font-family: Montserrat, sans-serif;
 }
 
-article {
+.intro, section, .judging, .rules {
   display: flex;
   align-items: center;
   padding: 4rem;
   column-gap: 8rem;
 }
-article .text-container {
+.intro .text-container, section .text-container, .judging .text-container, .rules .text-container {
   flex: 50%;
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
 }
-article .text-container p {
+.intro .text-container p, section .text-container p, .judging .text-container p, .rules .text-container p {
   font-family: Montserrat, sans-serif;
   color: white;
   font-size: 1rem;
   line-height: 1.7rem;
 }
-article .text-container h2 {
+.intro .text-container h2, section .text-container h2, .judging .text-container h2, .rules .text-container h2 {
   font-family: Clash Display, sans-serif;
   color: white;
   font-size: 2.2rem;
 }
-article div.image-container {
+.intro .image-container, section .image-container, .judging .image-container, .rules .image-container {
   flex: 50%;
 }
-article div.image-container img {
+.intro .image-container img, section .image-container img, .judging .image-container img, .rules .image-container img {
   width: 100%;
   height: auto;
 }
 
-article.rules {
+.rules {
   flex-direction: row-reverse;
   border-top: solid 1px rgba(255, 255, 255, 0.1803921569);
   border-bottom: solid 1px rgba(255, 255, 255, 0.1803921569);
   padding: 0rem 4rem;
+}
+
+.judging {
+  padding: 4rem 4rem 4rem 2rem;
+}
+.judging p span.highlight {
+  font-weight: bold;
+  color: #FF26B9;
+  font-size: 1.2rem;
+}
+.judging button {
+  margin-top: 2rem;
+}
+
+section {
+  flex-direction: row-reverse;
 }
 
 /*# sourceMappingURL=Home.css.map */
