@@ -10,7 +10,7 @@ function Header() {
     <nav className={isOpen}>
         {/* todo  animate on scroll from transparent to a background*/}
         <div>
-            <h1 className="company-name"><span>get</span><span>linked</span></h1>
+            <Link to='/' className="company-name"><span>get</span><span>linked</span></Link>
             <div className="mobile-nav">
                 <div onClick={() => setIsOpen('')}>
                     <img className="x-mark" src={xMark} alt="x mark" />
@@ -25,7 +25,7 @@ function Header() {
                 <Link>Timeline</Link>
                 <Link>Overview</Link>
                 <Link>FAQs</Link>
-                <Link>Contact</Link>
+                <Link to='/contact'>Contact</Link>
             </div>
             <div className="action">
                 <button className="btn-primary">Register</button>

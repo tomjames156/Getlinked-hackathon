@@ -51,7 +51,7 @@ nav .links-action-container .links a {
 }
 
 .btn-primary {
-  background: linear-gradient(270deg, #903AFF 0%, #FE34B9 100%);
+  background: linear-gradient(270deg, #903AFF 0%, #D434FE 100%);
   color: white;
   font-size: 1rem;
   padding: 0.75rem 2rem;
@@ -63,6 +63,7 @@ nav .links-action-container .links a {
 .company-name {
   font-size: 2.25rem;
   font-family: "Clash Display", sans-serif;
+  text-decoration: none;
 }
 .company-name span:nth-of-type(1) {
   color: white;
@@ -170,7 +171,7 @@ footer .content .contact div img {
     display: unset;
   }
   nav div:nth-of-type(1) .mobile-nav div:nth-of-type(1) {
-    background: linear-gradient(270deg, #903AFF 0%, #FE34B9 100%);
+    background: linear-gradient(270deg, #903AFF 0%, #D434FE 100%);
     width: fit-content;
     max-height: fit-content;
     padding: 1px;
@@ -204,7 +205,7 @@ footer .content .contact div img {
     width: 2.5rem;
   }
   nav div:nth-of-type(1) .mobile-nav div:nth-of-type(2):hover {
-    background: linear-gradient(270deg, #903AFF 0%, #FE34B9 100%);
+    background: linear-gradient(270deg, #903AFF 0%, #D434FE 100%);
   }
   nav div:nth-of-type(1) .mobile-nav div:nth-of-type(2):hover .bars:hover {
     background: #150E28;
@@ -231,7 +232,7 @@ footer .content .contact div img {
     color: transparent;
   }
   nav.mobile-open div:nth-of-type(1) .mobile-nav div:nth-of-type(1) {
-    background: linear-gradient(270deg, #903AFF 0%, #FE34B9 100%);
+    background: linear-gradient(270deg, #903AFF 0%, #D434FE 100%);
     width: fit-content;
     max-height: fit-content;
     padding: 1px;

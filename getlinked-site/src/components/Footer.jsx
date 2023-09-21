@@ -12,7 +12,7 @@ function Footer() {
         <div className="content">
             <div className="about-summary">
                 <div className="summary">
-                    <h1 className="company-name"><span>get</span><span>linked</span></h1>
+                    <Link to='/' className="company-name"><span>get</span><span>linked</span></Link>
                     <p>Getlinked Tech Hackathon is a technology innovation program established by a group of organizations with the aim of showcasing young and talented individuals in the field of technology</p>
                 </div>
                 <div className="links">

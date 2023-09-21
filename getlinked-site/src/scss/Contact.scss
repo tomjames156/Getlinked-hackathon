@@ -1,0 +1,93 @@
+@import "colours.scss";
+
+#contact{
+    color: white;
+    margin: 8.855rem 0 3rem 0;
+    height: fit-content;
+    font-family: Montserrat, sans-serif;
+
+    h1, h2, h3{
+        color: $heading;
+        font-family: Clash Display, sans-serif;
+    }
+
+    h1{
+        font-size: 3rem;
+    }
+
+    h2{
+        font-size: 1.75rem;
+    }
+
+    section{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 4rem;
+
+        > div:nth-of-type(1){
+            display: flex;
+            flex-direction: column;
+            row-gap: 1rem;
+
+            p{
+                font-size: 1rem;
+            }
+
+            .socials{
+                display: flex;
+                flex-direction: column;
+                row-gap: 1rem;
+
+                span{
+                    color: $heading;
+                }
+
+                > div{
+                    display: flex;
+                    align-items: center;
+                    column-gap: 1rem;
+                }
+            }
+        }
+
+        > div:nth-of-type(2){
+            border-radius: 0.75rem;
+            background: rgba(255, 255, 255, 0.03);
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            display: flex;
+            flex-direction: column;
+            row-gap: 2rem;
+            padding: 4rem;
+
+            > form{
+                display: flex;
+                flex-direction: column;
+                row-gap: 2rem;
+
+                input, textarea{
+                    border: solid 1px white;
+                    border-radius: 0.25rem;
+                    border: 1px solid #FFF;
+                    background: $input_background;
+                    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                    padding: 1rem 2rem;
+                    font-family: Montserrat, sans-serif;
+                    color: white;
+                    font-size: 1rem;
+                }
+
+                input::placeholder, 
+                textarea::placeholder{
+                    color: white;
+                    font-size: 1rem;
+                    font-family: Montserrat, sans-serif;
+                }
+                
+                button{
+                    align-self: center;
+                }
+            }
+        }
+    }
+}

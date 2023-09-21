@@ -1,9 +1,4 @@
-$heading: #D434FE;
-$heading2: #FF26B9;
-$heading3: #903AFF;
-$border: #FFFFFF2E;
-$background: #150E28;
-$gradient_background: linear-gradient(270deg, #903AFF 0%, #D434FE 100%);
+@import "colours.scss";
 
 main{
     width: 100%;
@@ -181,7 +176,7 @@ main{
 
 .judging{
     @extend .intro;
-    padding: 4rem 4rem 4rem 2rem;
+    padding: 6rem 4rem 8rem 2rem;
 
     p{
         span.highlight{
@@ -200,6 +195,7 @@ main{
     @extend .intro;
     flex-direction: row-reverse;
     align-items: flex-start;
+    padding: 8rem 4rem 8rem 4rem;
 
     .text-container{
 
@@ -253,7 +249,7 @@ main{
 
 .timeline{
     color: white;
-    padding: 4rem;
+    padding: 4rem 4rem 6rem 4rem;
     
     > div:nth-of-type(1){
         display: flex;
@@ -405,6 +401,7 @@ main{
 .prizes{
     @extend .intro;
     column-gap: 2rem;
+    padding: 4rem 4rem 8rem 4rem;
     align-items: flex-end;
     border: none;
 
@@ -507,7 +504,7 @@ main{
 
 .partners-sponsors{
     color: white;
-    padding: 4rem;
+    padding: 8rem 4rem 6rem 4rem;
     display: flex;
     row-gap: 4rem;
     flex-direction: column;
@@ -643,6 +640,8 @@ main{
 
 .privacy-policy{
     @extend .intro;
+    border-bottom: none;
+    padding-top: 8rem;
     
     p.last_updated{
         color: rgba(255, 255, 255, 0.75);

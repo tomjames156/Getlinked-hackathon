@@ -145,7 +145,7 @@ main {
 }
 
 .judging {
-  padding: 4rem 4rem 4rem 2rem;
+  padding: 6rem 4rem 8rem 2rem;
 }
 .judging p span.highlight {
   font-weight: bold;
@@ -159,6 +159,7 @@ main {
 .questions {
   flex-direction: row-reverse;
   align-items: flex-start;
+  padding: 8rem 4rem 8rem 4rem;
 }
 .questions .text-container > p {
   padding-right: 5rem;
@@ -199,7 +200,7 @@ main {
 
 .timeline {
   color: white;
-  padding: 4rem;
+  padding: 4rem 4rem 6rem 4rem;
 }
 .timeline > div:nth-of-type(1) {
   display: flex;
@@ -317,6 +318,7 @@ main {
 
 .prizes {
   column-gap: 2rem;
+  padding: 4rem 4rem 8rem 4rem;
   align-items: flex-end;
   border: none;
 }
@@ -399,7 +401,7 @@ main {
 
 .partners-sponsors {
   color: white;
-  padding: 4rem;
+  padding: 8rem 4rem 6rem 4rem;
   display: flex;
   row-gap: 4rem;
   flex-direction: column;
@@ -504,6 +506,10 @@ main {
   border-right: none;
 }
 
+.privacy-policy {
+  border-bottom: none;
+  padding-top: 8rem;
+}
 .privacy-policy p.last_updated {
   color: rgba(255, 255, 255, 0.75);
 }

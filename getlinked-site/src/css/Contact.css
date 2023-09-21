@@ -1,0 +1,79 @@
+#contact {
+  color: white;
+  margin: 8.855rem 0 3rem 0;
+  height: fit-content;
+  font-family: Montserrat, sans-serif;
+}
+#contact h1, #contact h2, #contact h3 {
+  color: #D434FE;
+  font-family: Clash Display, sans-serif;
+}
+#contact h1 {
+  font-size: 3rem;
+}
+#contact h2 {
+  font-size: 1.75rem;
+}
+#contact section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem;
+}
+#contact section > div:nth-of-type(1) {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+#contact section > div:nth-of-type(1) p {
+  font-size: 1rem;
+}
+#contact section > div:nth-of-type(1) .socials {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+#contact section > div:nth-of-type(1) .socials span {
+  color: #D434FE;
+}
+#contact section > div:nth-of-type(1) .socials > div {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+#contact section > div:nth-of-type(2) {
+  border-radius: 0.75rem;
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  padding: 4rem;
+}
+#contact section > div:nth-of-type(2) > form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+#contact section > div:nth-of-type(2) > form input, #contact section > div:nth-of-type(2) > form textarea {
+  border: solid 1px white;
+  border-radius: 0.25rem;
+  border: 1px solid #FFF;
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 1rem 2rem;
+  font-family: Montserrat, sans-serif;
+  color: white;
+  font-size: 1rem;
+}
+#contact section > div:nth-of-type(2) > form input::placeholder,
+#contact section > div:nth-of-type(2) > form textarea::placeholder {
+  color: white;
+  font-size: 1rem;
+  font-family: Montserrat, sans-serif;
+}
+#contact section > div:nth-of-type(2) > form button {
+  align-self: center;
+}
+
+/*# sourceMappingURL=Contact.css.map */

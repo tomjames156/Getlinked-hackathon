@@ -1,6 +1,4 @@
-$primary: linear-gradient(270deg, #903AFF 0%, #FE34B9 100%);
-$heading: #D434FE;
-$background: #150E28;
+@import "colours.scss";
 
 *{
     box-sizing: border-box;
@@ -61,7 +59,7 @@ nav{
 }
 
 .btn-primary{
-    background: $primary;
+    background: $gradient_background;
     color: white;
     font-size: 1rem;
     padding: 0.75rem 2rem;
@@ -73,6 +71,7 @@ nav{
 .company-name{
     font-size: 2.25rem;
     font-family: 'Clash Display', sans-serif;
+    text-decoration: none;
 
     span:nth-of-type(1){
         color: white;
@@ -201,7 +200,7 @@ footer{
                 display: unset;
         
                 div:nth-of-type(1){
-                    background: $primary;
+                    background: $gradient_background;
                     width: fit-content;
                     max-height: fit-content;
                     padding: 1px;
@@ -239,7 +238,7 @@ footer{
                 }
         
                 div:nth-of-type(2):hover{
-                    background: $primary;
+                    background: $gradient_background;
         
                     .bars:hover{
                         background: $background;
@@ -280,7 +279,7 @@ footer{
                 
         
                 div:nth-of-type(1){
-                    background: $primary;
+                    background: $gradient_background;
                     width: fit-content;
                     max-height: fit-content;
                     padding: 1px;

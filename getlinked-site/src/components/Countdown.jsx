@@ -1,6 +1,22 @@
+import { useState } from "react"
+import { useEffect } from "react"
+
 function Countdown() {
+  const [remainingTime, setRemainingTime] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+  })
+  const {days, hours, minutes, seconds} = remainingTime
+
   return (
-    <p className="countdown">00<span>H</span>00<span>M</span>00<span>S</span></p>
+    <p className="countdown">
+      {days < 10 ? '0' + days: days}<span>D</span>
+      {hours  < 10 ? '0' + hours: hours}<span>H</span>
+      {minutes < 10 ? '0' + minutes: minutes}<span>M</span>
+      {seconds  < 10 ? '0' + seconds: seconds}<span>S</span>
+    </p>
   )
 }
 
