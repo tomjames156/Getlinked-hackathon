@@ -9,11 +9,18 @@ import pinkLine from '../assets/images/animated/pink-line.png'
 import womanSitting from '../assets/images/people/7450159 1.png'
 import peoplePlanning from '../assets/images/people/8046554 1.png'
 import manThinking from '../assets/images/people/cwok_casual_21 1.png'
+import manStandingPadlock from '../assets/images/people/08 1.png'
+import goldMedal from '../assets/images/animated/gold_medal.png'
+import silverMedal from '../assets/images/animated/silver_medal.png'
+import bronzeMedal from '../assets/images/animated/bronze_medal.png'
+import trophy from '../assets/images/animated/9486889 1.png'
 import Countdown from '../components/Countdown'
 import FAQItem from '../components/FAQItem'
 import TimelineItem from '../components/TimelineItem'
+import Sponsors from '../components/Sponsors'
 
 // Maybe rename images
+// add lazy loading for some images
 
 function Home() {
   return (
@@ -153,6 +160,69 @@ function Home() {
                     reverse={true}
                 />
             </ul>
+        </section>
+        <section className="prizes">
+            <div className="image-container">
+                <img src={trophy} alt="trophy and dart board beside" />
+            </div>
+            <div className="text-container">
+                <div>
+                    <h2>Prizes and<br/> <span className='highlight'>Rewards</span></h2>
+                    <p>Highlight of the prizes or rewards for winners and for participants</p>
+                </div>
+                <ul className="rewards">                    
+                    <li id='second'>
+                        <img src={silverMedal} alt="silver medal second place" />
+                        <div>
+                            <h3 className="position"><span>2nd</span><br/>Runner</h3>
+                            <h2 className="reward">N300000</h2>
+                        </div>
+                    </li>
+                    <li id='first'>
+                        <img src={goldMedal} alt="gold medal first place" />
+                        <div>
+                            <h3 className="position"><span>1st</span><br/>Runner</h3>
+                            <h2 className="reward">N400000</h2>
+                        </div>
+                    </li>
+                    <li id='third'>
+                        <img src={bronzeMedal} alt="bronze medal third place" />
+                        <div>
+                            <h3 className="position"><span>3rd</span><br/>Runner</h3>
+                            <h2 className="reward">N150000</h2>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section className="partners-sponsors">
+            <div>
+                <h2>Partners and Sponsors</h2>
+                <p>Getlinked Hackathon 1.0 is honored to have the following major companies as its partners and sponsors</p>
+            </div>
+            <div className='all_sponsors'>
+                <Sponsors/>
+            </div>
+        </section>
+        <section className="privacy-policy">
+            <div className="text-container">
+                <h2>Privacy Policy and<br/> <span className='highlight'>Terms</span></h2>
+                <p className='last_updated'>Last updated on September 12, 2023</p>
+                <p>Below are our privacy & policy, which outline a lot of goodies. it’s our aim to always take of our participant</p>
+                <div className='policy'>
+                    <p>At getlinked tech Hackathon 1.0, we value your privacy and are committed to protecting your personal information. This Privacy Policy outlines how we collect, use, disclose, and safeguard your data when you participate in our tech hackathon event. By participating in our event, you consent to the practices described in this policy.
+                    </p>
+                    <h3>Licensing Policy</h3>
+                    <h4>Here are terms of our Standard License:</h4>
+                    <ul>
+                        <li>The Standard License grants you a non-exclusive right to navigate and register for our event</li>
+                        <li>You are licensed to use the item available at any free source sites, for your project developement</li>
+                    </ul>
+                </div>
+            </div>
+            <div className="image-container">
+                <img src={manStandingPadlock} alt="animated man standing on a padlock holding a key" />
+            </div>
         </section>
     </main>
   )
