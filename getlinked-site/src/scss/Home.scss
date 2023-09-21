@@ -642,5 +642,54 @@ main{
 
 
 .privacy-policy{
-    @extend .rules; 
+    @extend .intro;
+    
+    p.last_updated{
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    .policy{
+        border: solid 1px $heading;
+        border-radius: 0.3125rem;
+        padding: 3rem;
+        margin-top: 4rem;
+        color: white;
+        font-family: Montserrat, sans-serif;
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+
+        > div {
+            display: flex;
+            flex-direction: column;
+            row-gap: 1rem;
+
+            h3{
+                color: $heading;
+            }
+    
+            h4{
+                font-size: 1rem;
+            }
+    
+            .terms{
+                display: flex;
+                flex-direction: column;
+                padding-top: 1rem;
+                row-gap: 1rem;
+                
+                li{
+                    display: flex;
+                    align-items: flex-start;
+                    column-gap: 1rem;
+                    height: fit-content;
+                    list-style-type: none;
+                }
+            }
+    
+            button{
+                align-self: center;
+            }
+        }
+    }
 }
