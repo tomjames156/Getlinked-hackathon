@@ -1,0 +1,178 @@
+@import 'colours.scss';
+
+#register{
+
+    .registration{
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 3fr 7fr;
+        column-gap: 4rem;
+        margin: 0 4rem 0 4rem;
+
+        .text-container{
+            flex: 6fr;
+            max-width: 6fr;
+            border-radius: 0.75rem;
+            background: $input_background;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            padding: 4rem;
+            display: flex;
+            flex-direction: column;
+            row-gap: 1.5rem;
+            
+            h1{
+                color: $heading;
+                font-family: Clash Display, sans-serif;
+                font-size: 3rem;
+            }
+
+            p, label{
+                font-size: 1rem;
+                font-family: Montserrat, sans-serif;
+                color: white;
+            }
+
+            h2{
+                font-family: Montserrat, sans-serif;
+                font-size: 2rem;
+            }
+
+            form{
+                display: flex;
+                flex-direction: column;
+                row-gap: 1rem;
+
+                .inputs{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    column-gap: 1rem;
+                    row-gap: 1rem;
+
+                    > div{
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 1rem;
+
+                        input, select{
+                            font-family: Montserrat, sans-serif;
+                            font-size: 1rem;
+                            padding: 1rem;
+                            color: white;
+                            border-radius: 0.25rem;
+                            border: 1px solid #FFF;
+                            background: $input_background;
+                            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                        }
+
+                        select{
+                            appearance: none;
+                            -webkit-appearance: none;
+                            position: relative !important;
+                            background-image: url("../assets/icons/caret-down-svgrepo-com.svg");
+                            background-size: 24px;
+                            background-repeat: no-repeat;
+                            background-position: calc(100% - 1rem) center;
+
+                            option{
+                                background: $background;
+                                padding: 1rem;
+                                color: white;
+                            }
+                        }
+
+                        input::placeholder, 
+                        textarea::placeholder,
+                        select::placeholder{
+                            color: rgba(255, 255, 255, 0.25);
+                            min-width: 100%;
+                            font-family: Montserrat, sans-serif;
+                        }
+                    }
+                }
+
+                span{
+                    font-family: Montserrat, sans-serif;
+                    font-size: 0.85rem;
+                    font-style: italic;
+                }
+
+                .agreement{
+                    display: flex;
+                    align-items: center;
+                    column-gap: 0.5rem;
+                    
+                    label{
+                        font-size: 0.85rem;
+                    }
+                }
+
+                button{
+                    align-self: center;
+                    width: 100%;
+                    margin-top: 0.5rem;
+                }
+            }
+        }
+
+        .image-container{
+            flex: 4fr;
+            width: 4fr;
+
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    .congratulations{
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        
+        > div{
+            padding: 4rem;
+            border: solid 1px $heading;
+            display: flex;
+            flex-direction: column;
+            row-gap: 1rem;
+
+            h2{
+                font-family: Montserrat, sans-serif;
+                color: white;
+                font-size: 2rem;
+                line-height: 3rem;
+            }
+
+            p{
+                font-family: Montserrat, sans-serif;
+                color: white;
+                line-height: 1.7rem;
+            }
+            
+            div{
+                display: flex;
+                height: 100%;
+                position: relative;
+                
+
+                img:nth-of-type(1){
+                    margin-right: -10.5rem;
+                    height: fit-content;
+                }
+
+                img:nth-of-type(2){
+                    margin-top: 1rem;
+                }
+            }
+
+            button{
+                width: 100%;
+                margin-top: 1rem;
+            }
+        }
+    }
+}

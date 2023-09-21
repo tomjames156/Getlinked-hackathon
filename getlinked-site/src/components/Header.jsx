@@ -2,9 +2,12 @@ import { Link } from "react-router-dom"
 import menuBar from '../assets/icons/bars.svg'
 import xMark from '../assets/icons/xmark.svg'
 import { useState } from "react"
+import { useLocation, useNavigate } from "react-router-dom"
 
 function Header() {
     const [isOpen, setIsOpen] = useState('')
+    const location = useLocation()
+    const navigate = useNavigate()
 
   return (
     <nav className={isOpen}>
@@ -25,10 +28,10 @@ function Header() {
                 <Link>Timeline</Link>
                 <Link>Overview</Link>
                 <Link>FAQs</Link>
-                <Link to='/contact'>Contact</Link>
+                <Link className={`contact ${location.pathname === '/contact' || location.pathname === '/register' ? 'special' : ''}`} to='/contact'>Contact</Link>
             </div>
-            <div className="action">
-                <button className="btn-primary">Register</button>
+            <div className={`action ${location.pathname === '/register' ? 'special'  : ''}`}>
+                <button onClick={() => {navigate('/register')}} className="btn-primary">Register</button>
             </div>
         </div>
     </nav>

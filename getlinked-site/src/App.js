@@ -4,18 +4,24 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import './css/App.css';
 import Contact from './pages/Contact';
+import { ToastContainer } from 'react-toastify';
+import Register from './pages/Register';
 
 function App() {
   // Add animated Routes and scroll to top
   return (
-    <Router>
-      <Header/>
-      <Routes>
-        <Route path='/' element={<Home/>} />
-        <Route path='/contact' element={<Contact/>} />
-      </Routes>
-      <Footer/>
-    </Router>
+    <>
+      <Router>
+        <Header/>
+        <Routes>
+          <Route path='/' element={<Home/>} />
+          <Route path='/contact' element={<Contact/>} />
+          <Route path='/register' element={<Register/>} />
+        </Routes>
+        <Footer/>
+      </Router>
+      <ToastContainer position='top-center' autoClose={5000} theme='dark'/>
+    </>
   );
 }
 

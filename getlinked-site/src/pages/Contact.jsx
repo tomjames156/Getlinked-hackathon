@@ -4,6 +4,8 @@ import x from '../assets/icons/x.svg'
 import facebook from '../assets/icons/facebook.svg'
 import '../css/Contact.css'
 import { useState } from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Contact() {
     const [formData, setFormData] = useState({
@@ -11,6 +13,9 @@ function Contact() {
         email: '',
         message: '' 
     })
+
+    const { fname, email, message } = formData
+
 // validate formData
     const onChange = (e) => {
         setFormData((prevState) => ({...prevState, [e.target.name]: e.target.value}))
@@ -18,6 +23,22 @@ function Contact() {
 
     const onSubmit = (e) => {
         e.preventDefault()
+        if (formData.email === ''){
+            toast.error("Please enter your email")
+            return
+        }
+
+        if (formData.fname === ''){
+            toast.error("Please enter your firstname")
+            return
+        }
+
+        if(formData.message === ''){
+            toast.error("Please enter a message")
+            return
+        }
+
+        toast.success("Form data sent successfully")
         console.log(formData)
     }
 
@@ -42,10 +63,10 @@ function Contact() {
             </div>
             <div>
                 <h2>Questions or need assistance?<br/>Let us know about it!</h2>
-                <form onSubmit={onSubmit}>
-                    <input type="fname" name='fname' onChange={onChange} id='fname' required placeholder='First Name'/>
-                    <input type="email" name="email" required id='email' placeholder='Mail' onChange={onChange} />
-                    <textarea name="message" required id="message" cols="30" rows="10" onChange={onChange} placeholder='Message'></textarea>
+                <form onSubmit={onSubmit} noValidate>
+                    <input type="fname" name='fname' onChange={onChange} id='fname' value={fname || ''} required placeholder='First Name'/>
+                    <input type="email" name="email" required id='email' placeholder='Mail' value={email || ''} onChange={onChange} />
+                    <textarea name="message" required id="message" cols="30" value={message || ''} rows="10" onChange={onChange} placeholder='Message'></textarea>
                     <button type='submit' className='btn-primary'>Submit</button>
                 </form>
             </div>

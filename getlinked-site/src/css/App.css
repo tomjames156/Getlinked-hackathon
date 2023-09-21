@@ -49,6 +49,9 @@ nav .links-action-container .links a {
   text-decoration: none;
   font-size: 1rem;
 }
+nav .links-action-container .links .contact.special {
+  color: #D434FE;
+}
 
 .btn-primary {
   background: linear-gradient(270deg, #903AFF 0%, #D434FE 100%);
@@ -58,6 +61,7 @@ nav .links-action-container .links a {
   border: none;
   width: fit-content;
   border-radius: 0.25rem;
+  cursor: pointer;
 }
 
 .company-name {
