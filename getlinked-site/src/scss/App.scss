@@ -245,6 +245,7 @@ footer{
         transition: all ease 500ms;  
         padding: 1rem 2.5rem;    
         height: 5rem;
+        z-index: 7;
 
         div:nth-of-type(1){
             .mobile-nav{
@@ -306,6 +307,7 @@ footer{
             row-gap: 1.5rem;
             opacity: 0;
             transform: translateY(-200px);
+            z-index: 6;
             
             .links{
                 flex-direction: column;

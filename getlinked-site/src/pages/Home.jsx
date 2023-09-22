@@ -14,16 +14,40 @@ import goldMedal from '../assets/images/animated/gold_medal.png'
 import silverMedal from '../assets/images/animated/silver_medal.png'
 import bronzeMedal from '../assets/images/animated/bronze_medal.png'
 import trophy from '../assets/images/animated/9486889 1.png'
-import Countdown from '../components/Countdown'
+import CountdownTimer from '../components/CountdownTimer'
 import FAQItem from '../components/FAQItem'
 import TimelineItem from '../components/TimelineItem'
 import Sponsors from '../components/Sponsors'
 import PolicyTerm from '../components/PolicyTerm'
+import { useEffect, useState } from 'react'
 
 // Maybe rename images
 // add lazy loading for some images
 
 function Home() {
+    const [currentHash, setCurrentHash] = useState(window.location.hash);
+
+    useEffect(() => {
+        const handleHashChange = () => {
+        setCurrentHash(window.location.hash);
+        };
+
+        window.addEventListener('hashchange', handleHashChange);
+
+        return () => {
+        window.removeEventListener('hashchange', handleHashChange);
+        };
+    }, []);
+
+    useEffect(() => {
+        if (currentHash) {
+        const section = document.querySelector(currentHash);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+        }
+    }, [currentHash]);
+
   return (
     <main>
         <section className='hero'>
@@ -42,7 +66,7 @@ function Home() {
                         <p>Participate in getlinked tech Hackathon 2023 stand a chance to win a Big prize</p>
                     </div>
                     <button className='btn-primary'>Register</button>
-                    <Countdown/>
+                    <CountdownTimer/>
                     <img src={lightBulb} alt="light bulb" />
                 </div>
                 <div>
@@ -51,7 +75,8 @@ function Home() {
                 </div>
             </div>
         </section>
-        <article className='intro'>
+        <a href="#intro"></a>
+        <article id='intro' className='intro'>
             <div className='image-container'>
                 <img src={bigIdea} alt="the big idea light bulb" />
             </div>
@@ -86,7 +111,8 @@ function Home() {
                 <button className="btn-primary">Read More</button>
             </div>
         </article>
-        <section className='questions'>
+        <a href="#questions"></a>
+        <section id='questions' className='questions'>
             <div className='text-container'>
                 <h2>Frequently Asked<br/> <span className='highlight'>Questions</span></h2>
                 <p>We got answers to the questions that you might want to ask about <span className='bold'>getlinked Hackathon 1.0</span></p>
@@ -115,7 +141,8 @@ function Home() {
                 <img src={manThinking} alt="animated man sitting on a cloud thinking with question mark" />
             </div>
         </section>
-        <section className="timeline">
+        <a href="#timeline"></a>
+        <section id='timeline' className="timeline">
             <div>
                 <h2>Timeline</h2>
                 <p>Here is the breakdown of the time we anticipate using for the upcoming event.</p>

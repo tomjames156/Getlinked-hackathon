@@ -9,11 +9,20 @@ function Header() {
     const location = useLocation()
     const navigate = useNavigate()
 
+    const closeMenu = () => {
+        setIsOpen(false)
+    }
+
+    const goTo = path => {
+        navigate(path)
+        closeMenu()
+    }
+
   return (
     <nav className={isOpen}>
         {/* todo  animate on scroll from transparent to a background*/}
         <div>
-            <Link to='/' className="company-name"><span>get</span><span>linked</span></Link>
+            <Link onClick={closeMenu} to='/' className="company-name"><span>get</span><span>linked</span></Link>
             <div className="mobile-nav">
                 <div onClick={() => setIsOpen('')}>
                     <img className="x-mark" src={xMark} alt="x mark" />
@@ -25,13 +34,13 @@ function Header() {
         </div>
         <div className="links-action-container">
             <div className="links">
-                <Link>Timeline</Link>
-                <Link>Overview</Link>
-                <Link>FAQs</Link>
-                <Link className={`contact ${location.pathname === '/contact' || location.pathname === '/register' ? 'special' : ''}`} to='/contact'>Contact</Link>
+                <Link onClick={closeMenu} to='/#timeline'>Timeline</Link>
+                <Link onClick={closeMenu} to='/#intro'>Overview</Link>
+                <Link onClick={closeMenu} to='/#questions'>FAQs</Link>
+                <Link onClick={closeMenu} className={`contact ${location.pathname === '/contact' || location.pathname === '/register' ? 'special' : ''}`} to='/contact'>Contact</Link>
             </div>
             <div className={`register ${location.pathname === '/register' ? 'special'  : ''}`}>
-                <button onClick={() => {navigate('/register')}} className="btn-primary">Register</button>
+                <button onClick={() => {goTo('/register')}} className="btn-primary">Register</button>
             </div>
         </div>
     </nav>

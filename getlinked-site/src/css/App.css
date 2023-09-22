@@ -209,6 +209,7 @@ footer .content .contact div img {
     transition: all ease 500ms;
     padding: 1rem 2.5rem;
     height: 5rem;
+    z-index: 7;
   }
   nav div:nth-of-type(1) .mobile-nav {
     display: unset;
@@ -261,6 +262,7 @@ footer .content .contact div img {
     row-gap: 1.5rem;
     opacity: 0;
     transform: translateY(-200px);
+    z-index: 6;
   }
   nav .links-action-container .links {
     flex-direction: column;

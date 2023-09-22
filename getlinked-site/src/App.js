@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import './css/App.css';
 import Contact from './pages/Contact';
+import ScrollToTop from './utils/ScrollToTop';
 import { ToastContainer } from 'react-toastify';
 import Register from './pages/Register';
 
@@ -12,9 +13,10 @@ function App() {
   return (
     <>
       <Router>
+        <ScrollToTop/>
         <Header/>
         <Routes>
-          <Route path='/' element={<Home/>} />
+          <Route path='/' exact element={<Home/>} />
           <Route path='/contact' element={<Contact/>} />
           <Route path='/register' element={<Register/>} />
         </Routes>
