@@ -6,7 +6,7 @@ import '../css/Contact.css'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Loading from '../components/Loading'
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function Contact() {
@@ -77,12 +77,36 @@ function Contact() {
     <main id='contact'>
         <section>
             <div>
-                <h1>Get in touch</h1>
-                <p>Contact<br/> Information</p>
-                <p>27,Alara Street<br/> Yaba 100012<br/> Lagos State</p>
-                <p>Call Us : 07067981819</p>
-                <p>we are open from Monday-Friday<br/> 08:00am - 05:00pm</p>
-                <div className="socials">
+                <motion.h1
+                    initial={{ x: -200, opacity: 0}}
+                    whileInView={{ x: 0, opacity: 1, transition: { duration: 0.5 }}}
+                    viewport={{once: true, amount: 0.1 }}
+                >Get in touch</motion.h1>
+                <motion.p
+                    initial={{ x: -200, opacity: 0}}
+                    whileInView={{ x: 0, opacity: 1, transition: { duration: 0.5, delay: 0.1 }}}
+                    viewport={{once: true, amount: 0.1 }}
+                >Contact<br/> Information</motion.p>
+                <motion.p
+                    initial={{ x: -200, opacity: 0}}
+                    whileInView={{ x: 0, opacity: 1, transition: { duration: 0.5, delay: 0.15 }}}
+                    viewport={{once: true, amount: 0.1 }}
+                >27,Alara Street<br/> Yaba 100012<br/> Lagos State</motion.p>
+                <motion.p
+                    initial={{ x: -200, opacity: 0}}
+                    whileInView={{ x: 0, opacity: 1, transition: { duration: 0.5, delay: 0.2 }}}
+                    viewport={{once: true, amount: 0.1 }}
+                >Call Us : 07067981819</motion.p>
+                <motion.p
+                    initial={{ x: -200, opacity: 0}}
+                    whileInView={{ x: 0, opacity: 1, transition: { duration: 0.5, delay: 0.25 }}}
+                    viewport={{once: true, amount: 0.1 }}
+                >we are open from Monday-Friday<br/> 08:00am - 05:00pm</motion.p>
+                <motion.div className="socials"
+                    initial={{ x: -200, opacity: 0}}
+                    whileInView={{ x: 0, opacity: 1, transition: { duration: 0.5, delay: 0.3 }}}
+                    viewport={{once: true, amount: 0.1 }}
+                >
                     <span>Share on</span>
                     <div>
                         <img src={instagram} alt="instagram" />
@@ -90,9 +114,13 @@ function Contact() {
                         <img src={facebook} alt="facebook" />
                         <img src={linkedin} alt="linkedin" />
                     </div>
-                </div>
+                </motion.div>
             </div>
-            <div>
+            <motion.div
+                initial={{ x: 200, opacity: 0}}
+                whileInView={{ x: 0, opacity: 1, transition: { duration: 0.5 }}}
+                viewport={{once: true, amount: 0.1 }}
+            >
                 <h2>Questions or need assistance?<br/>Let us know about it!</h2>
                 <form onSubmit={onSubmit} noValidate>
                     <input type="first_name" name='first_name' onChange={onChange} id='first_name' value={first_name || ''} required placeholder='First Name'/>
@@ -100,7 +128,7 @@ function Contact() {
                     <textarea name="message" required id="message" cols="30" value={message || ''} rows="10" onChange={onChange} placeholder='Message'></textarea>
                     <button type='submit' className='btn-primary'>Submit</button>
                 </form>
-            </div>
+            </motion.div>
         </section>
         {isLoading && <Loading/>}
     </main>
