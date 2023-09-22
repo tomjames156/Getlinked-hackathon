@@ -4,6 +4,7 @@ import manWalkingEmoji from '../assets/images/people/man_walking.png'
 import womanWalkingEmoji from '../assets/images/people/woman_walking.png'
 import successfulMan from '../assets/images/people/successful-man.png'
 import successfullyDone from '../assets/images/animated/successfully-done.png'
+import checkboxFilled from '../assets/icons/checkmark-box.svg'
 import '../css/Register.css'
 import { useState } from 'react'
 import Loading from '../components/Loading'
@@ -26,6 +27,10 @@ function Register() {
 
     const onChange = (e) => {
         setFormData((prevState) => ({...prevState, [e.target.name]: e.target.value}))
+    }
+
+    const onChangeCheckBox = () => {
+        setFormData((prevState) => ({...prevState, agreed: !prevState.agreed}))
     }
 
     const onSubmit = (e) => {
@@ -129,7 +134,9 @@ function Register() {
                     </div>
                     <span className="highlight">Please review your registration details before submitting</span>
                     <div className='agreement'>
-                        <input type="checkbox" onChange={() => setFormData((prevState) => ({...prevState, agreed: !prevState.agreed}))} checked={agreed} name="agreed" id="agreed" />
+                        {agreed ? <img src={checkboxFilled} 
+                        onClick={onChangeCheckBox} alt="checkbox" /> : <span onClick={onChangeCheckBox} ></span>}
+                        <input style={{display: 'none'}} type="checkbox" onChange={onChangeCheckBox} checked={agreed} name="agreed" id="agreed" />
                         <label htmlFor="agreed">I agreed with the event terms and conditions and privacy policy</label>
                     </div>
                     <button className='btn-primary'>Register Now</button>

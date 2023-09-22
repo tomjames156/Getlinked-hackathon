@@ -92,6 +92,15 @@
   align-items: center;
   column-gap: 0.5rem;
 }
+#register .registration .text-container form .agreement span {
+  width: 10px;
+  height: 10px;
+  background: white;
+}
+#register .registration .text-container form .agreement img {
+  width: 13px;
+  height: 13px;
+}
 #register .registration .text-container form .agreement label {
   font-size: 0.85rem;
 }

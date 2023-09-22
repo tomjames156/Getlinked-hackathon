@@ -9,12 +9,14 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function Contact() {
+    const api = process.env.REACT_APP_API_BASE_URL
+    console.log(api)
     const [formData, setFormData] = useState({
         fname: '',
         email: '',
         message: '' 
     })
-    const [isLoading, setIsLoading] = useState(true)
+    const [isLoading, setIsLoading] = useState(false)
 
     const { fname, email, message } = formData
 

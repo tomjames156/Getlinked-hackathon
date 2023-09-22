@@ -30,7 +30,7 @@ function Header() {
                 <Link>FAQs</Link>
                 <Link className={`contact ${location.pathname === '/contact' || location.pathname === '/register' ? 'special' : ''}`} to='/contact'>Contact</Link>
             </div>
-            <div className={`action ${location.pathname === '/register' ? 'special'  : ''}`}>
+            <div className={`register ${location.pathname === '/register' ? 'special'  : ''}`}>
                 <button onClick={() => {navigate('/register')}} className="btn-primary">Register</button>
             </div>
         </div>

@@ -61,12 +61,12 @@ function Home() {
             </div>
         </article>
         <article className='rules'>
-            <div className='image-container'>
-                <img src={womanSitting} alt="animated 3d woman sitting using a tablet" />
-            </div>
             <div className='text-container'>
                 <h2>Rules and<br/> <span className='highlight'>Guidelines</span></h2>
                 <p>Our tech hackathon is a melting pot of visionaries, and its purpose is as clear as day: to shape the future. Whether you're a coding genius, a design maverick, or a concept wizard, you'll have the chance to transform your ideas into reality. Solving real-world problems, pushing the boundaries of technology, and creating solutions that can change the world, that's what we're all about!</p>
+            </div>
+            <div className='image-container'>
+                <img src={womanSitting} alt="animated 3d woman sitting using a tablet" />
             </div>
         </article>
         <article className='judging'>
@@ -87,9 +87,6 @@ function Home() {
             </div>
         </article>
         <section className='questions'>
-            <div className='image-container'>
-                <img src={manThinking} alt="animated man sitting on a cloud thinking with question mark" />
-            </div>
             <div className='text-container'>
                 <h2>Frequently Asked<br/> <span className='highlight'>Questions</span></h2>
                 <p>We got answers to the questions that you might want to ask about <span className='bold'>getlinked Hackathon 1.0</span></p>
@@ -113,6 +110,9 @@ function Home() {
                         question={'Can I work on a project I started before the hackathon?'}
                     />
                 </ul>
+            </div>
+            <div className='image-container'>
+                <img src={manThinking} alt="animated man sitting on a cloud thinking with question mark" />
             </div>
         </section>
         <section className="timeline">

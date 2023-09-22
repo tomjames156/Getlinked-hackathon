@@ -129,7 +129,8 @@ main{
 }
 
 .intro{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     padding: 4rem;
     column-gap: 8rem;
@@ -137,7 +138,6 @@ main{
     border-top: solid 1px $border;
 
     .text-container{
-        flex: 50%;
         display: flex;
         flex-direction: column;
         row-gap: 1rem;
@@ -157,7 +157,6 @@ main{
     }
 
     .image-container {
-        flex: 50%;
 
         img{
             width: 100%;
@@ -168,7 +167,6 @@ main{
 
 .rules{
     @extend .intro;
-    flex-direction: row-reverse;
     border-top: solid 1px $border;
     border-bottom: solid 1px $border;
     padding: 0rem 4rem;
@@ -193,7 +191,6 @@ main{
 
 .questions{
     @extend .intro;
-    flex-direction: row-reverse;
     align-items: flex-start;
     padding: 8rem 4rem 8rem 4rem;
 

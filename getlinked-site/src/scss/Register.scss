@@ -103,6 +103,17 @@
                     display: flex;
                     align-items: center;
                     column-gap: 0.5rem;
+
+                    span{
+                        width: 10px;
+                        height: 10px;
+                        background: white;
+                    }
+
+                    img{
+                        width: 13px;
+                        height: 13px;
+                    }
                     
                     label{
                         font-size: 0.85rem;

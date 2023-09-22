@@ -14,8 +14,9 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
+  overflow: hidden !important;
   width: 100%;
-  height: fit-content;
+  height: 6.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -47,10 +48,25 @@ nav .links-action-container .links {
 nav .links-action-container .links a {
   color: white;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 nav .links-action-container .links .contact.special {
   color: #D434FE;
+  background: linear-gradient(270deg, #903AFF 0%, #D434FE 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+nav .links-action-container .register button {
+  font-size: 1.1rem;
+}
+nav .links-action-container .register.special {
+  background: linear-gradient(270deg, #903AFF 0%, #D434FE 100%);
+  padding: 0.125rem;
+  border-radius: 0.35rem;
+}
+nav .links-action-container .register.special button {
+  background: #150E28;
+  padding: 0.55rem 1.8rem;
 }
 
 .btn-primary {
@@ -61,6 +77,7 @@ nav .links-action-container .links .contact.special {
   border: none;
   width: fit-content;
   border-radius: 0.25rem;
+  font-family: Montserrat, sans-serif;
   cursor: pointer;
 }
 
@@ -186,8 +203,11 @@ footer .content .contact div img {
 
 @media screen and (max-width: 500px) {
   nav {
+    flex-direction: column;
+    justify-content: flex-start;
     transition: all ease 500ms;
-    padding: 2rem 2.5rem;
+    padding: 1rem 2.5rem;
+    height: 5rem;
   }
   nav div:nth-of-type(1) .mobile-nav {
     display: unset;
@@ -234,6 +254,20 @@ footer .content .contact div img {
     padding: 4px;
   }
   nav .links-action-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 1.5rem;
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  nav .links-action-container .links {
+    flex-direction: column;
+    row-gap: 1.5rem;
+    color: transparent;
+    display: none;
+  }
+  nav .links-action-container .register {
     display: none;
   }
   nav.mobile-open {
@@ -242,6 +276,8 @@ footer .content .contact div img {
     flex-direction: column;
     align-items: flex-start;
     row-gap: 2.5rem;
+    padding: 1rem 2.5rem 5rem 2.5rem;
+    height: auto;
   }
   nav.mobile-open div:nth-of-type(1) h1 {
     background: transparent;
@@ -264,14 +300,14 @@ footer .content .contact div img {
     display: none;
   }
   nav.mobile-open .links-action-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    row-gap: 1.5rem;
+    opacity: 1;
+    transform: translateY(0);
   }
   nav.mobile-open .links-action-container .links {
-    flex-direction: column;
-    row-gap: 1.5rem;
+    display: flex;
+  }
+  nav.mobile-open .links-action-container .register {
+    display: unset;
   }
   footer {
     padding: 4rem 2.5rem 1.5rem 2.5rem;
