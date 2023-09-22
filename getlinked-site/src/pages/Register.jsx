@@ -120,7 +120,12 @@ function Register() {
     }
 
   return (
-    <main id="register">
+    <motion.main 
+        id="register"
+        initial={{width: 0}}
+        animate={{width: '100%'}}
+        exit={{x: window.innerWidth, transition: { duration: 0.1 }}}
+    >
         <section className='registration'>
             <motion.div 
                 className="image-container"
@@ -208,7 +213,7 @@ function Register() {
             </div>
         </section>
         {isLoading && <Loading/>}
-    </main>
+    </motion.main>
   )
 }
 

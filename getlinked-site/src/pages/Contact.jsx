@@ -73,7 +73,12 @@ function Contact() {
     }
 
   return (
-    <main id='contact'>
+    <motion.main 
+        id='contact'
+        initial={{width: 0}}
+        animate={{width: '100%'}}
+        exit={{x: window.innerWidth, transition: { duration: 0.1 }}}
+    >
         <section>
             <div>
                 <motion.h1
@@ -130,7 +135,7 @@ function Contact() {
             </motion.div>
         </section>
         {isLoading && <Loading/>}
-    </main>
+    </motion.main>
   )
 }
 

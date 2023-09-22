@@ -43,7 +43,12 @@ function Home() {
   return (
     <>
     <HeaderHome/>
-    <main id='home'>
+    <motion.main 
+        id='home'
+        initial={{width: 0}}
+        animate={{width: '100%'}}
+        exit={{x: window.innerWidth, transition: { duration: 0.1 }}}
+    >
         <section id='hero' className='hero'>
             <motion.div
                 initial={{ opacity: 0, x: 250}}
@@ -330,7 +335,7 @@ function Home() {
                 <img src={manStandingPadlock} alt="animated man standing on a padlock holding a key" />
             </motion.div>
         </section>
-    </main>
+    </motion.main>
     </>
   )
 }
