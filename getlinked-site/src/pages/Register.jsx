@@ -10,6 +10,7 @@ import { useState } from 'react'
 import Loading from '../components/Loading'
 
 function Register() {
+    const api = process.env.REACT_APP_API_BASE_URL
     const [formData, setFormData] = useState({
         team_name: '',
         phone_number: '',
@@ -30,10 +31,10 @@ function Register() {
     }
 
     const onChangeCheckBox = () => {
-        setFormData((prevState) => ({...prevState, agreed: !prevState.privacy_poclicy_accepted}))
+        setFormData((prevState) => ({...prevState, privacy_poclicy_accepted: !prevState.privacy_poclicy_accepted}))
     }
 
-    const onSubmit = (e) => {
+    const onSubmit = async (e) => {
         e.preventDefault()
         if(team_name === ''){
             toast.error("Please enter a Team name")
@@ -70,18 +71,36 @@ function Register() {
             return
         }
 
-        // toast.success("Form data sent successfully")
-        // setFormData({
-        //     team_name: '',
-        //     phone: '',
-        //     email: '',
-        //     topic: '',
-        //     category: '',
-        //     size: '0',
-        //     agreed: false
-        // })
+        formData.category = parseInt(category)
+        formData.group_size = parseInt(group_size)
         setIsLoading(true)
-        console.log(formData)
+
+        try{
+            const response = await fetch(`${api}/hackathon/registration`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+
+            const data = await response.json()
+            if (response.status !== 400){
+                toast.success('Your message has been sent')
+            }else{
+                if(data.email[0] === 'applicant with this email already exists.'){
+                    toast.error("Email already registered. Please enter a different email address")
+                }else{
+                    toast.error("Something went wrong")
+                }
+                setIsLoading(false)
+                return 
+            }
+        }
+        catch(err){
+            toast.error("Something went wrong")
+        }
+
         setIsLoading(false)
         setCongratulations(true)
     }
@@ -127,8 +146,16 @@ function Register() {
                             <label htmlFor="group_size">Group Size</label>
                             <select name="group_size" id="group_size" onChange={onChange} value={group_size || ''}>
                                 <option value="">Select</option>
-                                <option value={1}>1</option>
-                                <option value={2}>2</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
                             </select>
                         </div>
                     </div>

@@ -11,7 +11,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function Contact() {
     const api = process.env.REACT_APP_API_BASE_URL
-    console.log(api)
     const [formData, setFormData] = useState({
         first_name: '',
         email: '',
@@ -21,7 +20,6 @@ function Contact() {
 
     const { first_name, email, message } = formData
 
-// validate formData
     const onChange = (e) => {
         setFormData((prevState) => ({...prevState, [e.target.name]: e.target.value}))
     }
@@ -46,7 +44,7 @@ function Contact() {
         setIsLoading(true)
 
         try{
-            await fetch(`${api}/hackathon/contact-form`, {
+            const response = await fetch(`${api}/hackathon/contact-form`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -54,12 +52,24 @@ function Contact() {
                 body: JSON.stringify(formData)
             })
 
-            toast.success('Your message has been sent')
+            const data = await response.json()
+
+            if (response.status !== 400){
+                toast.success('Your message has been sent')
+            }else{
+                if(data.email[0] === 'Enter a valid email address.'){
+                    toast.error("Please enter a valid email address")
+                }else{
+                    toast.error("Something went wrong")
+                }
+                setIsLoading(false)
+                return 
+            }
+
         }
         catch(err){
             toast.error('Sorry something went wrong')
         }
-        
         setIsLoading(false)
     }
 
