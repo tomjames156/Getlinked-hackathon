@@ -53,6 +53,7 @@ nav .links-action-container .links a {
 nav .links-action-container .links .contact.special {
   color: #D434FE;
   background: linear-gradient(270deg, #903AFF 0%, #D434FE 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

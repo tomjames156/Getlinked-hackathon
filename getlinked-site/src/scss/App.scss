@@ -59,6 +59,7 @@ nav{
             .contact.special{
                 color: $heading;
                 background: $gradient_background;
+                background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
             }

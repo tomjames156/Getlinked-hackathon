@@ -12,25 +12,25 @@ import Loading from '../components/Loading'
 function Register() {
     const [formData, setFormData] = useState({
         team_name: '',
-        phone: '',
+        phone_number: '',
         email: '',
-        topic: '',
+        project_topic: '',
         category: '',
-        size: '0',
-        agreed: false
+        group_size: '0',
+        privacy_poclicy_accepted: false
     })
     const [isLoading, setIsLoading] = useState(false)
 
     const [congratulations, setCongratulations] = useState(false) 
 
-    const { team_name, phone, email, topic, category, size, agreed } = formData
+    const { team_name, phone_number, email, project_topic, category, group_size, privacy_poclicy_accepted } = formData
 
     const onChange = (e) => {
         setFormData((prevState) => ({...prevState, [e.target.name]: e.target.value}))
     }
 
     const onChangeCheckBox = () => {
-        setFormData((prevState) => ({...prevState, agreed: !prevState.agreed}))
+        setFormData((prevState) => ({...prevState, agreed: !prevState.privacy_poclicy_accepted}))
     }
 
     const onSubmit = (e) => {
@@ -40,7 +40,7 @@ function Register() {
             return
         }
 
-        if(phone === ''){
+        if(phone_number === ''){
             toast.error("Please enter a phone number")
             return
         }
@@ -50,7 +50,7 @@ function Register() {
             return
         }
 
-        if(topic === ''){
+        if(project_topic === ''){
             toast.error("Please enter your project topic")
             return
         }
@@ -60,12 +60,12 @@ function Register() {
             return
         }
 
-        if(size === ''){
+        if(group_size === ''){
             toast.error("Please enter size of your team")
             return
         }
 
-        if(!agreed){
+        if(!privacy_poclicy_accepted){
             toast.warning("Please agree to the terms and conditions to continue")
             return
         }
@@ -103,29 +103,29 @@ function Register() {
                             <input name="team_name" id="team_name" type="text" onChange={onChange} value={team_name || ''} placeholder='Enter the name of your group'/>
                         </div>
                         <div>
-                            <label htmlFor="phone">Phone</label>
-                            <input name='phone' id='phone' type="text" onChange={onChange} value={phone || ''} placeholder='Enter your phone number'/>
+                            <label htmlFor="phone_number">Phone</label>
+                            <input name='phone_number' id='phone_number' type="text" onChange={onChange} value={phone_number || ''} placeholder='Enter your phone number'/>
                         </div>
                         <div>
                             <label htmlFor="email">Email</label>
                             <input name='email' id='email' type="email" onChange={onChange} value={email || ''} placeholder='Enter your email address'/>
                         </div>
                         <div>
-                            <label htmlFor="topic">Project Topic</label>
-                            <input name="topic" id='topic' type="text" onChange={onChange} value={topic || ''} placeholder='What is your group project topic'/>
+                            <label htmlFor="project_topic">Project Topic</label>
+                            <input name="project_topic" id='project_topic' type="text" onChange={onChange} value={project_topic || ''} placeholder='What is your group project topic'/>
                         </div>
                         <div>
                             <label htmlFor="category">Category</label>
                             <select name="category" id="category" onChange={onChange} value={category || ''}>
                                 <option value="">Select your category</option>
-                                <option value="health">Agriculture</option>
-                                <option value="finance">Fin Tech</option>
-                                <option value="agric">Agro tech</option>
+                                <option value="1">MOBILE</option>
+                                <option value="2">WEB</option>
+                                <option value="3">UI/UX</option>
                             </select>
                         </div>
                         <div>
-                            <label htmlFor="size">Group Size</label>
-                            <select name="size" id="size" onChange={onChange} value={size || ''}>
+                            <label htmlFor="group_size">Group Size</label>
+                            <select name="group_size" id="group_size" onChange={onChange} value={group_size || ''}>
                                 <option value="">Select</option>
                                 <option value={1}>1</option>
                                 <option value={2}>2</option>
@@ -134,10 +134,10 @@ function Register() {
                     </div>
                     <span className="highlight">Please review your registration details before submitting</span>
                     <div className='agreement'>
-                        {agreed ? <img src={checkboxFilled} 
+                        {privacy_poclicy_accepted ? <img src={checkboxFilled} 
                         onClick={onChangeCheckBox} alt="checkbox" /> : <span onClick={onChangeCheckBox} ></span>}
-                        <input style={{display: 'none'}} type="checkbox" onChange={onChangeCheckBox} checked={agreed} name="agreed" id="agreed" />
-                        <label htmlFor="agreed">I agreed with the event terms and conditions and privacy policy</label>
+                        <input style={{display: 'none'}} type="checkbox" onChange={onChangeCheckBox} checked={privacy_poclicy_accepted} name="privacy_poclicy_accepted" id="privacy_poclicy_accepted" />
+                        <label htmlFor="privacy_poclicy_accepted">I agreed with the event terms and conditions and privacy policy</label>
                     </div>
                     <button className='btn-primary'>Register Now</button>
                 </form>

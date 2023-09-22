@@ -4,6 +4,7 @@ import x from '../assets/icons/x.svg'
 import facebook from '../assets/icons/facebook.svg'
 import '../css/Contact.css'
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 import Loading from '../components/Loading'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -12,27 +13,27 @@ function Contact() {
     const api = process.env.REACT_APP_API_BASE_URL
     console.log(api)
     const [formData, setFormData] = useState({
-        fname: '',
+        first_name: '',
         email: '',
         message: '' 
     })
     const [isLoading, setIsLoading] = useState(false)
 
-    const { fname, email, message } = formData
+    const { first_name, email, message } = formData
 
 // validate formData
     const onChange = (e) => {
         setFormData((prevState) => ({...prevState, [e.target.name]: e.target.value}))
     }
 
-    const onSubmit = (e) => {
+    const onSubmit = async (e) => {
         e.preventDefault()
         if (formData.email === ''){
             toast.error("Please enter your email")
             return
         }
 
-        if (formData.fname === ''){
+        if (formData.first_name === ''){
             toast.error("Please enter your firstname")
             return
         }
@@ -42,8 +43,24 @@ function Contact() {
             return
         }
 
-        toast.success("Form data sent successfully")
-        console.log(formData)
+        setIsLoading(true)
+
+        try{
+            await fetch(`${api}/hackathon/contact-form`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+
+            toast.success('Your message has been sent')
+        }
+        catch(err){
+            toast.error('Sorry something went wrong')
+        }
+        
+        setIsLoading(false)
     }
 
   return (
@@ -68,7 +85,7 @@ function Contact() {
             <div>
                 <h2>Questions or need assistance?<br/>Let us know about it!</h2>
                 <form onSubmit={onSubmit} noValidate>
-                    <input type="fname" name='fname' onChange={onChange} id='fname' value={fname || ''} required placeholder='First Name'/>
+                    <input type="first_name" name='first_name' onChange={onChange} id='first_name' value={first_name || ''} required placeholder='First Name'/>
                     <input type="email" name="email" required id='email' placeholder='Mail' value={email || ''} onChange={onChange} />
                     <textarea name="message" required id="message" cols="30" value={message || ''} rows="10" onChange={onChange} placeholder='Message'></textarea>
                     <button type='submit' className='btn-primary'>Submit</button>
