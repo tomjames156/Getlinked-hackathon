@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion'
 
 function CountdownTimer() {
   const targetDate = new Date('November 18, 2023 00:00:00').getTime();
@@ -32,12 +33,17 @@ function CountdownTimer() {
   }, []);
 
   return (
-    <p className='countdown'>
+    <motion.p 
+        className='countdown'
+        initial={{ opacity: 0, y: 50}}
+        whileInView={{opacity: 1, y: 0, transition: { duration: 0.5 }}}
+        viewport={{once: true, amount: 0.1 }}
+    >
         {timeRemaining.days > 9 ? timeRemaining.days :'0'+timeRemaining.days}<span>D</span>
         {timeRemaining.hours > 9 ? timeRemaining.hours : '0'+ timeRemaining.hours}<span>H</span>
         {timeRemaining.minutes > 9 ? timeRemaining.minutes : '0' + timeRemaining.minutes}<span>M</span>
         {timeRemaining.seconds > 9 ? timeRemaining.seconds : '0' + timeRemaining.seconds}<span>S</span>
-    </p>
+    </motion.p>
   );
 }
 

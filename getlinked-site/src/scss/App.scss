@@ -25,6 +25,10 @@ nav{
     padding: 1.5rem 3rem;
     background: $background;
     z-index: 7;
+
+    a{
+        cursor: pointer;
+    }
     
 
     > div:nth-of-type(1){
@@ -54,6 +58,16 @@ nav{
                 color: white;
                 text-decoration: none;
                 font-size: 1.1rem;
+                transition: all ease 100ms;
+            }
+
+            a:hover{
+                color: $heading;
+                cursor: pointer;
+            }
+
+            a:active{
+                color: $heading3;
             }
 
             .contact.special{

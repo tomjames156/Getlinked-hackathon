@@ -236,6 +236,8 @@ main{
             
             .answer{
                 padding: 1rem;
+                border: solid 1px $heading;
+                border-top: none;
                 background: darken($background, 2);
                 border-bottom-left-radius: 0.5rem;
                 border-bottom-right-radius: 0.5rem;
@@ -278,6 +280,7 @@ main{
             display: flex;
             column-gap: 4rem;
             align-items: center;
+            list-style-type: none;
 
             .activity-summary{
                 flex: 40%;

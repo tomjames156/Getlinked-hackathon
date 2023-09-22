@@ -35,9 +35,9 @@ function HeaderHome() {
         <div className="links-action-container">
             <div className="links">
                 <ScrollTo onClick={closeMenu} to='timeline' smooth={true}
-                duration={1000}>Timeline</ScrollTo>
-                <ScrollTo onClick={closeMenu} smooth={true} to='intro' duration={1000}>Overview</ScrollTo>
-                <ScrollTo onClick={closeMenu} smooth={true} to='questions' >FAQs</ScrollTo>
+                duration={500}>Timeline</ScrollTo>
+                <ScrollTo onClick={closeMenu} smooth={true} to='intro' duration={500}>Overview</ScrollTo>
+                <ScrollTo onClick={closeMenu} smooth={true} to='questions' duration={500}>FAQs</ScrollTo>
                 <Link onClick={closeMenu} className={`contact ${location.pathname === '/contact' || location.pathname === '/register' ? 'special' : ''}`} to='/contact'>Contact</Link>
             </div>
             <div className={`register ${location.pathname === '/register' ? 'special'  : ''}`}>

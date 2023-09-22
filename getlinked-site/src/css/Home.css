@@ -188,6 +188,8 @@ main {
 }
 .questions .faq-item > div:nth-of-type(2) .answer {
   padding: 1rem;
+  border: solid 1px #D434FE;
+  border-top: none;
   background: #110b20;
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
@@ -224,6 +226,7 @@ main {
   display: flex;
   column-gap: 4rem;
   align-items: center;
+  list-style-type: none;
 }
 .timeline .timelines .timeline-item .activity-summary {
   flex: 40%;
