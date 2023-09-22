@@ -14,41 +14,34 @@ import goldMedal from '../assets/images/animated/gold_medal.png'
 import silverMedal from '../assets/images/animated/silver_medal.png'
 import bronzeMedal from '../assets/images/animated/bronze_medal.png'
 import trophy from '../assets/images/animated/9486889 1.png'
-import CountdownTimer from '../components/CountdownTimer'
 import FAQItem from '../components/FAQItem'
 import TimelineItem from '../components/TimelineItem'
 import Sponsors from '../components/Sponsors'
 import PolicyTerm from '../components/PolicyTerm'
-import { useEffect, useState } from 'react'
+import CountdownTimer from '../components/CountdownTimer'
+import { useEffect } from 'react'
+import HeaderHome from '../components/HeaderHome'
 
 // Maybe rename images
 // add lazy loading for some images
 
 function Home() {
-    const [currentHash, setCurrentHash] = useState(window.location.hash);
 
     useEffect(() => {
-        const handleHashChange = () => {
-        setCurrentHash(window.location.hash);
-        };
-
-        window.addEventListener('hashchange', handleHashChange);
-
-        return () => {
-        window.removeEventListener('hashchange', handleHashChange);
-        };
-    }, []);
-
-    useEffect(() => {
-        if (currentHash) {
-        const section = document.querySelector(currentHash);
+        const hash = window.location.hash;
+        
+        if (hash) {
+        const section = document.querySelector(hash);
         if (section) {
             section.scrollIntoView({ behavior: 'smooth' });
         }
         }
-    }, [currentHash]);
+
+    }, []);
 
   return (
+    <>
+    <HeaderHome/>
     <main>
         <section className='hero'>
             <div>
@@ -260,6 +253,7 @@ function Home() {
             </div>
         </section>
     </main>
+    </>
   )
 }
 

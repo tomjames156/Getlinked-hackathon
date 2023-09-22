@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom"
+import { Link as ScrollTo } from 'react-scroll'
 import menuBar from '../assets/icons/bars.svg'
 import xMark from '../assets/icons/xmark.svg'
 import { useState } from "react"
 import { useLocation, useNavigate } from "react-router-dom"
 
-function Header() {
+function HeaderHome() {
     const [isOpen, setIsOpen] = useState('')
     const location = useLocation()
     const navigate = useNavigate()
@@ -33,9 +34,10 @@ function Header() {
         </div>
         <div className="links-action-container">
             <div className="links">
-                <Link onClick={closeMenu} to='/#timeline'>Timeline</Link>
-                <Link onClick={closeMenu}to='/#intro'>Overview</Link>
-                <Link onClick={closeMenu} to='/#questions'>FAQs</Link>
+                <ScrollTo onClick={closeMenu} to='timeline' smooth={true}
+                duration={1000}>Timeline</ScrollTo>
+                <ScrollTo onClick={closeMenu} smooth={true} to='intro' duration={1000}>Overview</ScrollTo>
+                <ScrollTo onClick={closeMenu} smooth={true} to='questions' >FAQs</ScrollTo>
                 <Link onClick={closeMenu} className={`contact ${location.pathname === '/contact' || location.pathname === '/register' ? 'special' : ''}`} to='/contact'>Contact</Link>
             </div>
             <div className={`register ${location.pathname === '/register' ? 'special'  : ''}`}>
@@ -46,4 +48,4 @@ function Header() {
   )
 }
 
-export default Header
+export default HeaderHome

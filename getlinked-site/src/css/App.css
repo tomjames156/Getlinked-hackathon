@@ -202,7 +202,7 @@ footer .content .contact div img {
   margin-top: 0.15rem;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
   nav {
     flex-direction: column;
     justify-content: flex-start;

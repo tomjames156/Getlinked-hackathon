@@ -33,10 +33,10 @@ function CountdownTimer() {
 
   return (
     <p className='countdown'>
-        {timeRemaining.days > 10 ? timeRemaining.days :'0'+timeRemaining.days}<span>D</span>
-        {timeRemaining.hours > 10 ? timeRemaining.hours : '0'+ timeRemaining.hours}<span>H</span>
-        {timeRemaining.minutes > 10 ? timeRemaining.minutes : '0' + timeRemaining.minutes}<span>M</span>
-        {timeRemaining.seconds > 10 ? timeRemaining.seconds : '0' + timeRemaining.seconds}<span>S</span>
+        {timeRemaining.days > 9 ? timeRemaining.days :'0'+timeRemaining.days}<span>D</span>
+        {timeRemaining.hours > 9 ? timeRemaining.hours : '0'+ timeRemaining.hours}<span>H</span>
+        {timeRemaining.minutes > 9 ? timeRemaining.minutes : '0' + timeRemaining.minutes}<span>M</span>
+        {timeRemaining.seconds > 9 ? timeRemaining.seconds : '0' + timeRemaining.seconds}<span>S</span>
     </p>
   );
 }
