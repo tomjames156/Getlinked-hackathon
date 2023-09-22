@@ -38,7 +38,7 @@ function HeaderHome() {
                 duration={500}>Timeline</ScrollTo>
                 <ScrollTo onClick={closeMenu} smooth={true} to='intro' duration={500}>Overview</ScrollTo>
                 <ScrollTo onClick={closeMenu} smooth={true} to='questions' duration={500}>FAQs</ScrollTo>
-                <Link onClick={closeMenu} className={`contact ${location.pathname === '/contact' || location.pathname === '/register' ? 'special' : ''}`} to='/contact'>Contact</Link>
+                <Link onClick={closeMenu} className={`contact ${location.pathname === '/contact' ? 'special' : ''}`} to='/contact'>Contact</Link>
             </div>
             <div className={`register ${location.pathname === '/register' ? 'special'  : ''}`}>
                 <button onClick={() => {goTo('/register')}} className="btn-primary">Register</button>

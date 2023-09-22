@@ -92,8 +92,20 @@ nav{
             border-radius: 0.35rem;
 
             button{
-                background: $background;
+                background: $background !important;
                 padding: 0.55rem 1.8rem;
+            }
+        }
+
+        .register.special:hover{
+            background: $gradient_background;
+            padding: 0.125rem;
+            border-radius: 0.35rem;
+
+            button{
+                background: $gradient_background;
+                padding: 0.55rem 1.8rem;
+                border: none;
             }
         }
     }
@@ -109,6 +121,12 @@ nav{
     border-radius: 0.25rem;
     font-family: Montserrat, sans-serif;
     cursor: pointer;
+    transition: all ease 100ms;
+}
+
+.btn-primary:hover{
+    background: $input_background;
+    border: solid 1.5px $heading;
 }
 
 .company-name{

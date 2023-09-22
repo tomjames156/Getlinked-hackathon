@@ -77,8 +77,18 @@ nav .links-action-container .register.special {
   border-radius: 0.35rem;
 }
 nav .links-action-container .register.special button {
-  background: #150E28;
+  background: #150E28 !important;
   padding: 0.55rem 1.8rem;
+}
+nav .links-action-container .register.special:hover {
+  background: linear-gradient(270deg, #903AFF 0%, #D434FE 100%);
+  padding: 0.125rem;
+  border-radius: 0.35rem;
+}
+nav .links-action-container .register.special:hover button {
+  background: linear-gradient(270deg, #903AFF 0%, #D434FE 100%);
+  padding: 0.55rem 1.8rem;
+  border: none;
 }
 
 .btn-primary {
@@ -91,6 +101,12 @@ nav .links-action-container .register.special button {
   border-radius: 0.25rem;
   font-family: Montserrat, sans-serif;
   cursor: pointer;
+  transition: all ease 100ms;
+}
+
+.btn-primary:hover {
+  background: rgba(255, 255, 255, 0.03);
+  border: solid 1.5px #D434FE;
 }
 
 .company-name {

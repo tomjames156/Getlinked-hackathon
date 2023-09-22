@@ -36,7 +36,7 @@ function Header() {
                 <Link onClick={closeMenu} to='/#timeline'>Timeline</Link>
                 <Link onClick={closeMenu}to='/#intro'>Overview</Link>
                 <Link onClick={closeMenu} to='/#questions'>FAQs</Link>
-                <Link onClick={closeMenu} className={`contact ${location.pathname === '/contact' || location.pathname === '/register' ? 'special' : ''}`} to='/contact'>Contact</Link>
+                <Link onClick={closeMenu} className={`contact ${location.pathname === '/contact' ? 'special' : ''}`} to='/contact'>Contact</Link>
             </div>
             <div className={`register ${location.pathname === '/register' ? 'special'  : ''}`}>
                 <button onClick={() => {goTo('/register')}} className="btn-primary">Register</button>

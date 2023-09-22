@@ -6,6 +6,7 @@ import successfulMan from '../assets/images/people/successful-man.png'
 import successfullyDone from '../assets/images/animated/successfully-done.png'
 import checkboxFilled from '../assets/icons/checkmark-box.svg'
 import '../css/Register.css'
+import { motion } from 'framer-motion'
 import { useState } from 'react'
 import Loading from '../components/Loading'
 
@@ -17,7 +18,7 @@ function Register() {
         email: '',
         project_topic: '',
         category: '',
-        group_size: '0',
+        group_size: '',
         privacy_poclicy_accepted: false
     })
     const [isLoading, setIsLoading] = useState(false)
@@ -25,6 +26,10 @@ function Register() {
     const [congratulations, setCongratulations] = useState(false) 
 
     const { team_name, phone_number, email, project_topic, category, group_size, privacy_poclicy_accepted } = formData
+
+    const scrollToTop = () => {
+        window.scrollTo(0, 0);
+    }
 
     const onChange = (e) => {
         setFormData((prevState) => ({...prevState, [e.target.name]: e.target.value}))
@@ -37,12 +42,12 @@ function Register() {
     const onSubmit = async (e) => {
         e.preventDefault()
         if(team_name === ''){
-            toast.error("Please enter a Team name")
+            toast.error("Please enter your Team name")
             return
         }
 
         if(phone_number === ''){
-            toast.error("Please enter a phone number")
+            toast.error("Please enter your phone number")
             return
         }
 
@@ -93,6 +98,16 @@ function Register() {
                 }
                 setIsLoading(false)
                 return 
+            }else{
+                setFormData({
+                    team_name: '',
+                    phone_number: '',
+                    email: '',
+                    project_topic: '',
+                    category: '',
+                    group_size: '0',
+                    privacy_poclicy_accepted: false
+                })
             }
         }
         catch(err){
@@ -101,15 +116,26 @@ function Register() {
 
         setIsLoading(false)
         setCongratulations(true)
+        scrollToTop()
     }
 
   return (
     <main id="register">
         <section className='registration'>
-            <div className="image-container">
+            <motion.div 
+                className="image-container"
+                initial={{ x: -200, opacity: 0}}
+                whileInView={{ x: 0, opacity: 1, transition: { duration: 0.5 }}}
+                viewport={{once: true, amount: 0.1 }}
+            >
                 <img src={manSittingThumbsUp} alt="animated man sitting at a desk showing thumbs up" />
-            </div>
-            <div className="text-container">
+            </motion.div>
+            <motion.div 
+                className="text-container"
+                initial={{ y: 300, opacity: 0}}
+                whileInView={{ y: 0, opacity: 1, transition: { duration: 0.5 }}}
+                viewport={{once: true, amount: 0.1 }}
+            >
                 <h1>Register</h1>
                 <p>Be part of this movement! <img src={womanWalkingEmoji} alt='woman walking'/><img src={manWalkingEmoji} alt='man-walking'/></p>
                 <h2>CREATE YOUR ACCOUNT</h2>
@@ -166,10 +192,11 @@ function Register() {
                     </div>
                     <button className='btn-primary'>Register Now</button>
                 </form>
-            </div>
+            </motion.div>
         </section>
         <section
-            className={`congratulations ${congratulations ? 'shown' : 'hidden'}`}>
+            className={`congratulations ${congratulations ? 'shown' : 'hidden'}`}
+        >
             <div>
                 <div>
                     <img src={successfullyDone} alt="check mark" />
