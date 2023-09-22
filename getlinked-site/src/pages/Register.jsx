@@ -85,9 +85,7 @@ function Register() {
             })
 
             const data = await response.json()
-            if (response.status !== 400){
-                toast.success('Your message has been sent')
-            }else{
+            if (response.status === 400){
                 if(data.email[0] === 'applicant with this email already exists.'){
                     toast.error("Email already registered. Please enter a different email address")
                 }else{
