@@ -1,0 +1,56 @@
+main {
+  width: 100%;
+  height: 100%;
+  margin: 4rem 0 3rem 0;
+}
+
+.error404 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 4rem;
+  column-gap: 4rem;
+}
+.error404 .text-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.error404 .text-container p {
+  font-family: Montserrat, sans-serif;
+  color: white;
+  font-size: 1rem !important;
+  line-height: 1.7rem;
+}
+.error404 .text-container h2 {
+  font-family: Clash Display, sans-serif;
+  color: white;
+  font-size: 2.2rem;
+}
+.error404 .text-container .error {
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+}
+.error404 .text-container .error h1 {
+  font-size: 6rem;
+  font-family: Clash Display, sans-serif;
+  color: #D434FE;
+}
+.error404 .text-container .error h2 {
+  font-size: 2rem;
+}
+.error404 .image-container img {
+  width: 100%;
+  height: auto;
+}
+.error404 button {
+  display: flex;
+  column-gap: 0.5rem;
+  align-items: center;
+}
+.error404 button i {
+  color: white;
+}
+
+/*# sourceMappingURL=Error.css.map */

@@ -7,7 +7,6 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Loading from '../components/Loading'
 import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 function Contact() {
     const api = process.env.REACT_APP_API_BASE_URL

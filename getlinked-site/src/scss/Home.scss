@@ -154,6 +154,22 @@ main{
             color: white;
             font-size: 2.2rem;
         }
+
+        .error{
+            display: flex;
+            align-items: center;
+            column-gap: 2rem;
+
+            h1{
+                font-size: 6rem;
+                font-family: Clash Display, sans-serif;
+                color: $heading;
+            }
+
+            h2{
+                font-size: 2rem;
+            }
+        }
     }
 
     .image-container {

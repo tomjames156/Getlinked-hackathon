@@ -129,6 +129,19 @@ main {
   color: white;
   font-size: 2.2rem;
 }
+.intro .text-container .error, .privacy-policy .text-container .error, .prizes .text-container .error, .questions .text-container .error, .judging .text-container .error, .rules .text-container .error {
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+}
+.intro .text-container .error h1, .privacy-policy .text-container .error h1, .prizes .text-container .error h1, .questions .text-container .error h1, .judging .text-container .error h1, .rules .text-container .error h1 {
+  font-size: 6rem;
+  font-family: Clash Display, sans-serif;
+  color: #D434FE;
+}
+.intro .text-container .error h2, .privacy-policy .text-container .error h2, .prizes .text-container .error h2, .questions .text-container .error h2, .judging .text-container .error h2, .rules .text-container .error h2 {
+  font-size: 2rem;
+}
 .intro .image-container img, .privacy-policy .image-container img, .prizes .image-container img, .questions .image-container img, .judging .image-container img, .rules .image-container img {
   width: 100%;
   height: auto;
