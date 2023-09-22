@@ -2,9 +2,11 @@ import { toast } from 'react-toastify'
 import manSittingThumbsUp from '../assets/images/people/graphic-designer.png'
 import manWalkingEmoji from '../assets/images/people/man_walking.png'
 import womanWalkingEmoji from '../assets/images/people/woman_walking.png'
+import successfulMan from '../assets/images/people/successful-man.png'
+import successfullyDone from '../assets/images/animated/successfully-done.png'
 import '../css/Register.css'
 import { useState } from 'react'
-import Congratulations from '../components/Congratulations'
+import Loading from '../components/Loading'
 
 function Register() {
     const [formData, setFormData] = useState({
@@ -16,6 +18,9 @@ function Register() {
         size: '0',
         agreed: false
     })
+    const [isLoading, setIsLoading] = useState(false)
+
+    const [congratulations, setCongratulations] = useState(false) 
 
     const { team_name, phone, email, topic, category, size, agreed } = formData
 
@@ -60,8 +65,20 @@ function Register() {
             return
         }
 
-        toast.success("Form data sent successfully")
+        // toast.success("Form data sent successfully")
+        // setFormData({
+        //     team_name: '',
+        //     phone: '',
+        //     email: '',
+        //     topic: '',
+        //     category: '',
+        //     size: '0',
+        //     agreed: false
+        // })
+        setIsLoading(true)
         console.log(formData)
+        setIsLoading(false)
+        setCongratulations(true)
     }
 
   return (
@@ -119,7 +136,19 @@ function Register() {
                 </form>
             </div>
         </section>
-        <Congratulations/>
+        <section
+            className={`congratulations ${congratulations ? 'shown' : 'hidden'}`}>
+            <div>
+                <div>
+                    <img src={successfullyDone} alt="check mark" />
+                    <img src={successfulMan} alt="man celebrating successfully registered" />
+                </div>
+                <h2>Congratulations<br/> you have successfully Registered!</h2>
+                <p>Yes, it was easy and you did it!<br/> check your mail box for next step</p>
+                <button onClick={() => setCongratulations(false)} className='btn-primary'>Back</button>
+            </div>
+        </section>
+        {isLoading && <Loading/>}
     </main>
   )
 }

@@ -4,6 +4,7 @@ import x from '../assets/icons/x.svg'
 import facebook from '../assets/icons/facebook.svg'
 import '../css/Contact.css'
 import { useState } from 'react'
+import Loading from '../components/Loading'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -13,6 +14,7 @@ function Contact() {
         email: '',
         message: '' 
     })
+    const [isLoading, setIsLoading] = useState(true)
 
     const { fname, email, message } = formData
 
@@ -71,6 +73,7 @@ function Contact() {
                 </form>
             </div>
         </section>
+        {isLoading && <Loading/>}
     </main>
   )
 }

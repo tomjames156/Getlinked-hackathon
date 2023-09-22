@@ -1,6 +1,8 @@
 @import 'colours.scss';
 
 #register{
+    position: relative;
+    margin: 8.855rem 0 3rem 0;
 
     .registration{
         display: grid;
@@ -35,6 +37,7 @@
             h2{
                 font-family: Montserrat, sans-serif;
                 font-size: 2rem;
+                color: white;
             }
 
             form{
@@ -126,12 +129,16 @@
     }
 
     .congratulations{
-        position: relative;
+        position: absolute;
         width: 100%;
+        top: 0;
+        left: 0;
+        background: $congratulations_background;
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
+        transition: all ease 500ms;
         
         > div{
             padding: 4rem;
@@ -174,5 +181,17 @@
                 margin-top: 1rem;
             }
         }
+    }
+
+    .hidden{
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-100px);
+    }
+
+    .shown{
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: default;
     }
 }

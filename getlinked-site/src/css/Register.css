@@ -1,3 +1,7 @@
+#register {
+  position: relative;
+  margin: 8.855rem 0 3rem 0;
+}
 #register .registration {
   display: grid;
   justify-content: center;
@@ -29,6 +33,7 @@
 #register .registration .text-container h2 {
   font-family: Montserrat, sans-serif;
   font-size: 2rem;
+  color: white;
 }
 #register .registration .text-container form {
   display: flex;
@@ -104,12 +109,16 @@
   height: auto;
 }
 #register .congratulations {
-  position: relative;
+  position: absolute;
   width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(21, 14, 40, 0.93);
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  transition: all ease 500ms;
 }
 #register .congratulations > div {
   padding: 4rem;
@@ -144,6 +153,16 @@
 #register .congratulations > div button {
   width: 100%;
   margin-top: 1rem;
+}
+#register .hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-100px);
+}
+#register .shown {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: default;
 }
 
 /*# sourceMappingURL=Register.css.map */
