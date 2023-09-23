@@ -22,6 +22,7 @@ nav {
   justify-content: space-between;
   padding: 1.5rem 3rem;
   background: #150E28;
+  background-blend-mode: luminosity;
   z-index: 7;
 }
 nav a {
@@ -149,6 +150,27 @@ footer {
   color: white;
   font-family: Montserrat, sans-serif;
   font-weight: 500;
+  position: relative;
+}
+footer .star {
+  position: absolute;
+  width: 14px;
+}
+footer #white-1 {
+  top: 7rem;
+  left: 1rem;
+}
+footer #white-2 {
+  bottom: 7rem;
+  right: 2rem;
+}
+footer #purple {
+  right: 50%;
+  bottom: 5rem;
+}
+footer #gray {
+  right: 30%;
+  top: 5rem;
 }
 footer .content {
   display: grid;
@@ -364,7 +386,7 @@ footer .content .contact div img {
   border-radius: 1rem !important;
   background: #FAE1E2 !important;
   padding-right: 2.5rem !important;
-  font-family: Montserrat, sans-serif;
+  font-family: Montserrat, sans-serif !important;
 }
 
 .Toastify__toast--error::after {
@@ -389,7 +411,7 @@ footer .content .contact div img {
   border: 1px solid #3A9EA5 !important;
   border-radius: 1rem !important;
   background: #F0F9FA !important;
-  font-family: Montserrat, sans-serif;
+  font-family: Montserrat, sans-serif !important;
   padding-right: 2rem !important;
 }
 
@@ -416,7 +438,7 @@ footer .content .contact div img {
   padding-right: 2.5rem !important;
   border: 1px solid #E78326 !important;
   background: #FADFC5 !important;
-  font-family: Montserrat, sans-serif;
+  font-family: Montserrat, sans-serif !important;
 }
 
 .Toastify__toast--warning::before {
@@ -447,6 +469,7 @@ footer .content .contact div img {
   width: 100%;
   font-weight: 400;
   margin-left: 25px !important;
+  font-family: Montserrat, sans-serif !important;
 }
 
 .Toastify__toast > button > svg {

@@ -4,10 +4,16 @@ main{
     width: 100%;
     height: 100%;
     margin: 5.855rem 0 3rem 0;
+    position: relative;
 }
 
 .highlight{
     color: $heading;
+}
+
+.star{
+    width: 14px;
+    position: absolute;
 }
 
 .bold{
@@ -15,11 +21,33 @@ main{
 }
 
 .hero{
+    margin: 6.5rem 0 3rem 0;
     color: white;
-    border-bottom: solid 1px #FFFFFF2E;
     border-top: solid 1px #FFFFFF2E;
-    background: #140D27;
     padding-top: 3rem;
+    background: url('../assets/flares/lens_flare_intro_left.png') no-repeat;
+    background-position: top -100px left 0;
+    background-size: 800px auto;
+    background-blend-mode: hard-light;
+    position: relative;
+
+    #white-1{
+        top: 6rem;
+        left: 6rem;
+        width: 20px;
+    }
+
+    #gray-1{
+        bottom: 8.5rem;
+        left: 40%;
+        width: 20px;
+    }
+
+    #gray-2{
+        top: 10rem;
+        right: 40%;
+        width: 18px;
+    }
 
     > div:nth-of-type(1){
         display: flex;
@@ -101,14 +129,19 @@ main{
         
         > div:nth-of-type(2){
             position: relative;
+            background-attachment: fixed;
+            background: url('../assets/flares/lens_flare_circle.png') no-repeat 0 0;
+            background-position: center;
+            background-size: 100%;
 
             img{
                 width: 100%;
                 height: auto;
+                background-blend-mode: hard-light;
             }
 
             img:not(.ball){
-                filter: grayscale(100%);
+                filter: brightness(0.85) grayscale(100%);
                 background-blend-mode: luminosity;
             }
 
@@ -116,7 +149,7 @@ main{
                 position: absolute;
                 top: 0;
                 left: 0;
-                opacity: 0.65;
+                opacity: 0.7;
                 background-blend-mode: hard-light;
             }
         }
@@ -136,6 +169,18 @@ main{
     column-gap: 8rem;
     border-bottom: solid 1px $border;
     border-top: solid 1px $border;
+    position: relative;
+
+    #purple-1{
+        top: 35%;
+        right: 4rem;
+        width: 25px;
+    }
+
+    #pink-1{
+        top: 40%;
+        left: 2rem;
+    }
 
     .text-container{
         display: flex;
@@ -173,10 +218,18 @@ main{
     }
 
     .image-container {
+        position: relative;
 
         img{
             width: 100%;
             height: auto;
+        }
+
+        .arrow{
+            bottom: -1rem;
+            right: -2rem;
+            width: fit-content;
+            position: absolute;
         }
     }
 }
@@ -186,11 +239,46 @@ main{
     border-top: solid 1px $border;
     border-bottom: solid 1px $border;
     padding: 0rem 4rem;
+    background: url('../assets/flares/circle.png'), -204.25px 7px / 119.817% 104.852% no-repeat;
+    background-blend-mode: hard-light;
+    background-size: 900px auto;
+    background-position: left 0 top -150px;
+    position: relative;
+
+    .image-container{
+        position: relative;
+
+        .ellipse{
+            position: absolute;
+            top: 5rem;
+            right: 6.5rem;
+            width: 6.5rem;
+            z-index: -1;
+        }
+
+    }
+
+    #gray-1{
+        top: 5rem;
+        left: 25%;
+        width: 20px;
+    }
+
+    #white-1{
+        bottom: 6rem;
+        right: 45%;
+        width: 22px;
+    }
 }
 
 .judging{
     @extend .intro;
     padding: 6rem 4rem 8rem 2rem;
+    background: url('../assets/flares/circle.png') no-repeat, url('../assets/flares/circle.png') no-repeat;
+    background-blend-mode: hard-light;
+    background-size: 900px auto;
+    background-position: left -100px bottom -100px, right -300px bottom -400px;
+    position: relative;
 
     p{
         span.highlight{
@@ -203,12 +291,67 @@ main{
     button{
         margin-top: 2rem;
     }
+
+    
+
+    .image-container{
+        position: relative;
+
+        .ellipse{
+            position: absolute;
+            top: -1.5rem;
+            left: 4.5rem;
+            width: 6.5rem;
+            z-index: -1;
+        }
+
+    }
+
+    #white-1{
+        bottom: 8rem;
+        right: 50%;
+        width: 20px;
+    }
+
+    #gray-1{
+        bottom: 30rem;
+        left: 25%;
+        width: 18px;
+    }
+
+    #purple-1{
+        top: 11rem;
+        left: 10%;
+        width: 20px;
+    }
 }
 
 .questions{
     @extend .intro;
     align-items: flex-start;
     padding: 8rem 4rem 8rem 4rem;
+    position: relative;
+
+    #purple-2{
+        top: 6rem;
+        left: 2rem;
+        width: 25px;
+    }
+
+    #purple-1{
+        right: 36%;
+        top: 12rem;
+    }
+
+    #white-1{
+        bottom: 9rem;
+        right: 15%;
+    }
+
+    #gray-1{
+        right: 40%;
+        bottom: 25rem;
+    }
 
     .text-container{
 
@@ -218,6 +361,37 @@ main{
     }
 
     .image-container{
+        position: relative;
+
+            
+        p{
+            position: absolute;
+            z-index: 2;
+            top: 1rem;  
+            font-family: Montserrat, sans-serif;
+            font-size: 4.5rem;
+            font-weight: bold;
+            color: $heading;
+            color: $background;
+            text-shadow: $heading 0px 0px 3px;
+        }
+
+        p:nth-of-type(1){
+            top: -2rem;
+            left: 10%;
+        }
+
+        p:nth-of-type(2){
+            font-size: 6rem;
+            left: 29%;
+            top: -8rem;
+        }
+
+        p:nth-of-type(3){
+            top: -3.5rem;
+            right: 42%;
+        }
+
         img{
             margin-top: -1rem;
         }
@@ -265,6 +439,22 @@ main{
 .timeline{
     color: white;
     padding: 4rem 4rem 6rem 4rem;
+    position: relative;
+
+    #purple-1{
+        top: 15rem;
+        left: 20%;
+    }
+
+    #white-1{
+        top: 50%;
+        right: 15%;
+    }
+
+    #gray-1{
+        bottom: 9rem;
+        left: 10%;
+    }
     
     > div:nth-of-type(1){
         display: flex;
@@ -420,6 +610,36 @@ main{
     padding: 4rem 4rem 8rem 4rem;
     align-items: flex-end;
     border: none;
+    background: url('../assets/flares/circle.png'), -204.25px 7px / 119.817% 104.852% no-repeat;
+    background-blend-mode: hard-light;
+    background-size: 900px auto;
+    background-position: left -100px bottom -100px;
+    position: relative;
+
+    #white-1{
+        left: 20%;
+        bottom: 8rem;
+    }
+
+    #white-2{
+        left: 51%;
+        top: 18rem;
+    }
+
+    #white-3{
+        right: 3.5rem;
+        top: 25rem;
+    }
+
+    #purple-1{
+        left: 20%;
+        top: 4rem;
+    }
+
+    #gray-1{
+        right: 19%;
+        bottom: 4rem;
+    }
 
     .text-container{
         flex: 40%;
@@ -526,6 +746,28 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background: url('../assets/flares/circle.png') no-repeat, url('../assets/flares/circle.png') no-repeat;
+    background-blend-mode: hard-light;
+    background-size: 70% auto, 70% auto;
+    background-position: left -250px top -100px, right -400px bottom -200px;
+    position: relative;
+
+    #purple-1{
+        left: 10%;
+        top: 17rem;
+    }
+
+    #purple-2{
+        right: 40%;
+        top: 25rem;
+        z-index: 4;
+    }
+    
+    #white-1{
+        right: 40%;
+        bottom: 10rem;
+        z-index: 4;
+    }
 
     > div:nth-of-type(1){
         display: flex;
@@ -657,10 +899,51 @@ main{
 .privacy-policy{
     @extend .intro;
     border-bottom: none;
-    padding-top: 8rem;
+    padding-top: 10rem;
+    background: url('../assets/flares/circle.png') no-repeat;
+    background-blend-mode: hard-light;
+    background-size: 900px auto;
+    background-position: left -100px bottom -200px;
+    position: relative;
+    justify-content: space-between;
     
     p.last_updated{
         color: rgba(255, 255, 255, 0.75);
+    }
+
+    #purple-1{
+        left: 1rem;
+        bottom: 15rem;
+    }
+
+    #purple-2{
+        left: 50%;
+        top: 20rem;
+    }
+
+    #purple-3{
+        right: 33%;
+        bottom: 25rem;
+    }
+
+    #white-1{
+        right: 10rem;
+        top: 15rem;
+    }
+
+    #white-2{
+        right: 40%;
+        bottom: 20rem;
+    }
+
+    #gray-1{
+        right: 3rem;
+        bottom: 15rem;
+    }
+
+    #gray-2{
+        left: 33%;
+        top: 9rem;
     }
 
     .policy{
@@ -706,5 +989,12 @@ main{
                 align-self: center;
             }
         }
+    }
+
+    .image-container{
+        padding-top: 10rem;
+        background: url('../assets/icons/security.svg') no-repeat;
+        background-size: 90% auto;
+        background-position: top 1rem left 50% ;
     }
 }

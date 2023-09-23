@@ -6,6 +6,7 @@ import glitteryBall from '../assets/images/animated/Image 1.png'
 import lightBulb from '../assets/images/animated/Creative 1.png'
 import bigIdea from '../assets/images/animated/the big idea 1.png'
 import pinkLine from '../assets/images/animated/pink-line.png'
+import pinkArrow from '../assets/images/animated/arrow.png'
 import womanSitting from '../assets/images/people/7450159 1.png'
 import peoplePlanning from '../assets/images/people/8046554 1.png'
 import manThinking from '../assets/images/people/cwok_casual_21 1.png'
@@ -14,6 +15,7 @@ import goldMedal from '../assets/images/animated/gold_medal.png'
 import silverMedal from '../assets/images/animated/silver_medal.png'
 import bronzeMedal from '../assets/images/animated/bronze_medal.png'
 import trophy from '../assets/images/animated/9486889 1.png'
+import ellipse from '../assets/images/animated/Ellipse 1.png'
 import FAQItem from '../components/FAQItem'
 import TimelineItem from '../components/TimelineItem'
 import Sponsors from '../components/Sponsors'
@@ -22,6 +24,10 @@ import CountdownTimer from '../components/CountdownTimer'
 import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import HeaderHome from '../components/HeaderHome'
+import GrayStar from '../components/GrayStar'
+import WhiteStar from '../components/WhiteStar'
+import PurpleStar from '../components/PurpleStar'
+import PinkStar from '../components/PinkStar'
 
 // Maybe rename images
 // add lazy loading for some images
@@ -50,6 +56,9 @@ function Home() {
         exit={{x: window.innerWidth, transition: { duration: 0.1 }}}
     >
         <section id='hero' className='hero'>
+            <WhiteStar/>
+            <GrayStar/>
+            <GrayStar id="gray-2"/>
             <motion.div
                 initial={{ opacity: 0, x: 250}}
                 whileInView={{opacity: 1, x: 0, transition: { duration: 0.5 }}}
@@ -83,6 +92,8 @@ function Home() {
             </div>
         </section>
         <article id='intro' className='intro'>
+            <PurpleStar/>
+            <PinkStar/>
             <motion.div 
                 className='image-container'
                 initial={{ opacity: 0, x: -250}}
@@ -90,6 +101,7 @@ function Home() {
                 viewport={{once: true, amount: 0.1 }}
             >
                 <img src={bigIdea} alt="the big idea light bulb" />
+                <img className='arrow' src={pinkArrow} alt="gradient coily arrow" />
             </motion.div>
             <motion.div 
                 className='text-container'
@@ -102,6 +114,8 @@ function Home() {
             </motion.div>
         </article>
         <article className='rules'>
+            <GrayStar/>
+            <WhiteStar/>
             <motion.div 
                 className='text-container'
                 initial={{ opacity: 0, x: -250}}
@@ -118,15 +132,20 @@ function Home() {
                 viewport={{once: true, amount: 0.1 }}
             >
                 <img src={womanSitting} alt="animated 3d woman sitting using a tablet" />
+                <img className='ellipse' src={ellipse} alt="gradient ellipse" />
             </motion.div>
         </article>
         <article className='judging'>
+            <PurpleStar/>
+            <GrayStar/>
+            <WhiteStar/>
             <motion.div 
                 className='image-container'
                 initial={{ opacity: 0, x: -250}}
                 whileInView={{opacity: 1, x: 0, transition: { duration: 0.5 }}}
                 viewport={{once: true, amount: 0.1 }}
             >
+                <img className='ellipse' src={ellipse} alt="gradient ellipse" />
                 <img src={peoplePlanning} alt="people working with a plan" />
             </motion.div>
             <motion.div 
@@ -149,6 +168,10 @@ function Home() {
         </article>
         <a href="#questions"></a>
         <section id='questions' className='questions'>
+            <PurpleStar/>
+            <PurpleStar id='purple-2' />
+            <WhiteStar/>
+            <GrayStar/>
             <div className='text-container'>
                 <h2>Frequently Asked<br/> <span className='highlight'>Questions</span></h2>
                 <p>We got answers to the questions that you might want to ask about <span className='bold'>getlinked Hackathon 1.0</span></p>
@@ -184,11 +207,29 @@ function Home() {
                 whileInView={{ y: 0, opacity: 1, transition: { duration: 0.5 }}}
                 viewport={{once: true, amount: 0.1 }}
             >
+                <motion.p 
+                    initial={{ textShadow: 'white 0px 0px 3px' }}
+                    whileInView={{ textShadow: '#D434FE 0px 0px 3px', transition: { duration: 0.5 }}}
+                    viewport={{once: true, amount: 0.1 }}
+                >?</motion.p>
+                <motion.p 
+                    initial={{ textShadow: 'white 0px 0px 3px' }}
+                    whileInView={{ textShadow: '#D434FE 0px 0px 3px', transition: { duration: 0.5 }}}
+                    viewport={{once: true, amount: 0.1 }}
+                >?</motion.p>
+                <motion.p 
+                    initial={{ textShadow: 'white 0px 0px 3px' }}
+                    whileInView={{ textShadow: '#D434FE 0px 0px 3px', transition: { duration: 0.5 }}}
+                    viewport={{once: true, amount: 0.1 }}
+                >?</motion.p>
                 <img src={manThinking} alt="animated man sitting on a cloud thinking with question mark" />
             </motion.div>
         </section>
         <a href="#timeline"></a>
         <section id='timeline' className="timeline">
+            <WhiteStar/>
+            <PurpleStar/>
+            <GrayStar/>
             <div>
                 <h2>Timeline</h2>
                 <p>Here is the breakdown of the time we anticipate using for the upcoming event.</p>
@@ -236,6 +277,11 @@ function Home() {
             </ul>
         </section>
         <section className="prizes">
+            <WhiteStar/>
+            <WhiteStar id='white-2'/>
+            <WhiteStar id='white-3'/>
+            <PurpleStar/>
+            <GrayStar/>
             <motion.div 
                 className="image-container"
                 initial={{ opacity: 0, x: -250}}
@@ -290,6 +336,9 @@ function Home() {
             </div>
         </section>
         <section className="partners-sponsors">
+            <WhiteStar/>
+            <PurpleStar id="purple-2"/>
+            <PurpleStar/>
             <div>
                 <h2>Partners and Sponsors</h2>
                 <p>Getlinked Hackathon 1.0 is honored to have the following major companies as its partners and sponsors</p>
@@ -299,6 +348,13 @@ function Home() {
             </div>
         </section>
         <section className="privacy-policy">
+            <WhiteStar id="white-1"/>
+            <PurpleStar id="purple-1"/>
+            <GrayStar id="gray-1"/>
+            <WhiteStar id="white-2"/>
+            <PurpleStar id="purple-2"/>
+            <GrayStar id="gray-2"/>
+            <PurpleStar id="purple-3"/>
             <motion.div 
                 className="text-container"
                 initial={{ opacity: 0, x: -250}}

@@ -5,10 +5,17 @@ import x from '../assets/icons/x.svg'
 import facebook from '../assets/icons/facebook.svg'
 import locationMarker from '../assets/icons/location-marker.svg'
 import phone from '../assets/icons/phone.svg'
+import GrayStar from "./GrayStar";
+import PurpleStar from "./PurpleStar";
+import WhiteStar from "./WhiteStar";
 
 function Footer() {
   return (
     <footer>
+        <GrayStar id="gray"/>
+        <WhiteStar id="white-1"/>
+        <WhiteStar id="white-2"/>
+        <PurpleStar id="purple"/>
         <div className="content">
             <div className="about-summary">
                 <div className="summary">

@@ -2,10 +2,16 @@ main {
   width: 100%;
   height: 100%;
   margin: 5.855rem 0 3rem 0;
+  position: relative;
 }
 
 .highlight {
   color: #D434FE;
+}
+
+.star {
+  width: 14px;
+  position: absolute;
 }
 
 .bold {
@@ -13,11 +19,30 @@ main {
 }
 
 .hero {
+  margin: 6.5rem 0 3rem 0;
   color: white;
-  border-bottom: solid 1px rgba(255, 255, 255, 0.1803921569);
   border-top: solid 1px rgba(255, 255, 255, 0.1803921569);
-  background: #140D27;
   padding-top: 3rem;
+  background: url("../assets/flares/lens_flare_intro_left.png") no-repeat;
+  background-position: top -100px left 0;
+  background-size: 800px auto;
+  background-blend-mode: hard-light;
+  position: relative;
+}
+.hero #white-1 {
+  top: 6rem;
+  left: 6rem;
+  width: 20px;
+}
+.hero #gray-1 {
+  bottom: 8.5rem;
+  left: 40%;
+  width: 20px;
+}
+.hero #gray-2 {
+  top: 10rem;
+  right: 40%;
+  width: 18px;
 }
 .hero > div:nth-of-type(1) {
   display: flex;
@@ -83,20 +108,25 @@ main {
 }
 .hero .content > div:nth-of-type(2) {
   position: relative;
+  background-attachment: fixed;
+  background: url("../assets/flares/lens_flare_circle.png") no-repeat 0 0;
+  background-position: center;
+  background-size: 100%;
 }
 .hero .content > div:nth-of-type(2) img {
   width: 100%;
   height: auto;
+  background-blend-mode: hard-light;
 }
 .hero .content > div:nth-of-type(2) img:not(.ball) {
-  filter: grayscale(100%);
+  filter: brightness(0.85) grayscale(100%);
   background-blend-mode: luminosity;
 }
 .hero .content > div:nth-of-type(2) .ball {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0.65;
+  opacity: 0.7;
   background-blend-mode: hard-light;
 }
 .hero .content p {
@@ -112,6 +142,16 @@ main {
   column-gap: 8rem;
   border-bottom: solid 1px rgba(255, 255, 255, 0.1803921569);
   border-top: solid 1px rgba(255, 255, 255, 0.1803921569);
+  position: relative;
+}
+.intro #purple-1, .privacy-policy #purple-1, .prizes #purple-1, .questions #purple-1, .judging #purple-1, .rules #purple-1 {
+  top: 35%;
+  right: 4rem;
+  width: 25px;
+}
+.intro #pink-1, .privacy-policy #pink-1, .prizes #pink-1, .questions #pink-1, .judging #pink-1, .rules #pink-1 {
+  top: 40%;
+  left: 2rem;
 }
 .intro .text-container, .privacy-policy .text-container, .prizes .text-container, .questions .text-container, .judging .text-container, .rules .text-container {
   display: flex;
@@ -142,19 +182,58 @@ main {
 .intro .text-container .error h2, .privacy-policy .text-container .error h2, .prizes .text-container .error h2, .questions .text-container .error h2, .judging .text-container .error h2, .rules .text-container .error h2 {
   font-size: 2rem;
 }
+.intro .image-container, .privacy-policy .image-container, .prizes .image-container, .questions .image-container, .judging .image-container, .rules .image-container {
+  position: relative;
+}
 .intro .image-container img, .privacy-policy .image-container img, .prizes .image-container img, .questions .image-container img, .judging .image-container img, .rules .image-container img {
   width: 100%;
   height: auto;
+}
+.intro .image-container .arrow, .privacy-policy .image-container .arrow, .prizes .image-container .arrow, .questions .image-container .arrow, .judging .image-container .arrow, .rules .image-container .arrow {
+  bottom: -1rem;
+  right: -2rem;
+  width: fit-content;
+  position: absolute;
 }
 
 .rules {
   border-top: solid 1px rgba(255, 255, 255, 0.1803921569);
   border-bottom: solid 1px rgba(255, 255, 255, 0.1803921569);
   padding: 0rem 4rem;
+  background: url("../assets/flares/circle.png"), -204.25px 7px/119.817% 104.852% no-repeat;
+  background-blend-mode: hard-light;
+  background-size: 900px auto;
+  background-position: left 0 top -150px;
+  position: relative;
+}
+.rules .image-container {
+  position: relative;
+}
+.rules .image-container .ellipse {
+  position: absolute;
+  top: 5rem;
+  right: 6.5rem;
+  width: 6.5rem;
+  z-index: -1;
+}
+.rules #gray-1 {
+  top: 5rem;
+  left: 25%;
+  width: 20px;
+}
+.rules #white-1 {
+  bottom: 6rem;
+  right: 45%;
+  width: 22px;
 }
 
 .judging {
   padding: 6rem 4rem 8rem 2rem;
+  background: url("../assets/flares/circle.png") no-repeat, url("../assets/flares/circle.png") no-repeat;
+  background-blend-mode: hard-light;
+  background-size: 900px auto;
+  background-position: left -100px bottom -100px, right -300px bottom -400px;
+  position: relative;
 }
 .judging p span.highlight {
   font-weight: bold;
@@ -164,13 +243,83 @@ main {
 .judging button {
   margin-top: 2rem;
 }
+.judging .image-container {
+  position: relative;
+}
+.judging .image-container .ellipse {
+  position: absolute;
+  top: -1.5rem;
+  left: 4.5rem;
+  width: 6.5rem;
+  z-index: -1;
+}
+.judging #white-1 {
+  bottom: 8rem;
+  right: 50%;
+  width: 20px;
+}
+.judging #gray-1 {
+  bottom: 30rem;
+  left: 25%;
+  width: 18px;
+}
+.judging #purple-1 {
+  top: 11rem;
+  left: 10%;
+  width: 20px;
+}
 
 .questions {
   align-items: flex-start;
   padding: 8rem 4rem 8rem 4rem;
+  position: relative;
+}
+.questions #purple-2 {
+  top: 6rem;
+  left: 2rem;
+  width: 25px;
+}
+.questions #purple-1 {
+  right: 36%;
+  top: 12rem;
+}
+.questions #white-1 {
+  bottom: 9rem;
+  right: 15%;
+}
+.questions #gray-1 {
+  right: 40%;
+  bottom: 25rem;
 }
 .questions .text-container > p {
   padding-right: 5rem;
+}
+.questions .image-container {
+  position: relative;
+}
+.questions .image-container p {
+  position: absolute;
+  z-index: 2;
+  top: 1rem;
+  font-family: Montserrat, sans-serif;
+  font-size: 4.5rem;
+  font-weight: bold;
+  color: #D434FE;
+  color: #150E28;
+  text-shadow: #D434FE 0px 0px 3px;
+}
+.questions .image-container p:nth-of-type(1) {
+  top: -2rem;
+  left: 10%;
+}
+.questions .image-container p:nth-of-type(2) {
+  font-size: 6rem;
+  left: 29%;
+  top: -8rem;
+}
+.questions .image-container p:nth-of-type(3) {
+  top: -3.5rem;
+  right: 42%;
 }
 .questions .image-container img {
   margin-top: -1rem;
@@ -211,6 +360,19 @@ main {
 .timeline {
   color: white;
   padding: 4rem 4rem 6rem 4rem;
+  position: relative;
+}
+.timeline #purple-1 {
+  top: 15rem;
+  left: 20%;
+}
+.timeline #white-1 {
+  top: 50%;
+  right: 15%;
+}
+.timeline #gray-1 {
+  bottom: 9rem;
+  left: 10%;
 }
 .timeline > div:nth-of-type(1) {
   display: flex;
@@ -332,6 +494,31 @@ main {
   padding: 4rem 4rem 8rem 4rem;
   align-items: flex-end;
   border: none;
+  background: url("../assets/flares/circle.png"), -204.25px 7px/119.817% 104.852% no-repeat;
+  background-blend-mode: hard-light;
+  background-size: 900px auto;
+  background-position: left -100px bottom -100px;
+  position: relative;
+}
+.prizes #white-1 {
+  left: 20%;
+  bottom: 8rem;
+}
+.prizes #white-2 {
+  left: 51%;
+  top: 18rem;
+}
+.prizes #white-3 {
+  right: 3.5rem;
+  top: 25rem;
+}
+.prizes #purple-1 {
+  left: 20%;
+  top: 4rem;
+}
+.prizes #gray-1 {
+  right: 19%;
+  bottom: 4rem;
 }
 .prizes .text-container {
   flex: 40%;
@@ -418,6 +605,25 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: url("../assets/flares/circle.png") no-repeat, url("../assets/flares/circle.png") no-repeat;
+  background-blend-mode: hard-light;
+  background-size: 70% auto, 70% auto;
+  background-position: left -250px top -100px, right -400px bottom -200px;
+  position: relative;
+}
+.partners-sponsors #purple-1 {
+  left: 10%;
+  top: 17rem;
+}
+.partners-sponsors #purple-2 {
+  right: 40%;
+  top: 25rem;
+  z-index: 4;
+}
+.partners-sponsors #white-1 {
+  right: 40%;
+  bottom: 10rem;
+  z-index: 4;
 }
 .partners-sponsors > div:nth-of-type(1) {
   display: flex;
@@ -519,10 +725,44 @@ main {
 
 .privacy-policy {
   border-bottom: none;
-  padding-top: 8rem;
+  padding-top: 10rem;
+  background: url("../assets/flares/circle.png") no-repeat;
+  background-blend-mode: hard-light;
+  background-size: 900px auto;
+  background-position: left -100px bottom -200px;
+  position: relative;
+  justify-content: space-between;
 }
 .privacy-policy p.last_updated {
   color: rgba(255, 255, 255, 0.75);
+}
+.privacy-policy #purple-1 {
+  left: 1rem;
+  bottom: 15rem;
+}
+.privacy-policy #purple-2 {
+  left: 50%;
+  top: 20rem;
+}
+.privacy-policy #purple-3 {
+  right: 33%;
+  bottom: 25rem;
+}
+.privacy-policy #white-1 {
+  right: 10rem;
+  top: 15rem;
+}
+.privacy-policy #white-2 {
+  right: 40%;
+  bottom: 20rem;
+}
+.privacy-policy #gray-1 {
+  right: 3rem;
+  bottom: 15rem;
+}
+.privacy-policy #gray-2 {
+  left: 33%;
+  top: 9rem;
 }
 .privacy-policy .policy {
   border: solid 1px #D434FE;
@@ -561,6 +801,12 @@ main {
 }
 .privacy-policy .policy > div button {
   align-self: center;
+}
+.privacy-policy .image-container {
+  padding-top: 10rem;
+  background: url("../assets/icons/security.svg") no-repeat;
+  background-size: 90% auto;
+  background-position: top 1rem left 50%;
 }
 
 /*# sourceMappingURL=Home.css.map */
