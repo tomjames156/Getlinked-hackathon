@@ -1,10 +1,38 @@
 @import "colours.scss";
 
+.star{
+    position: absolute;
+}
+
 #contact{
     color: white;
-    margin: 5.855rem 0 3rem 0;
+    margin: 8.855rem 0 3rem 0;
     height: fit-content;
     font-family: Montserrat, sans-serif;
+    position: relative;
+
+    #pink-1{
+        top: 8rem;
+        left: 6rem;
+    }
+
+    #gray-1{
+        top: 2rem;
+        right: 6rem;
+        width: 18px;
+    }
+
+    #purple-1{
+        right: 50%;
+        bottom: 12.5rem;
+        width: 20px;
+    }
+
+    #white-1{
+        right: 2rem;
+        bottom: 0;
+        width: 20px;
+    }
 
     h1, h2, h3{
         color: $heading;

@@ -8,6 +8,10 @@ import checkboxFilled from '../assets/icons/checkmark-box.svg'
 import '../css/Register.css'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
+import WhiteStar from '../components/WhiteStar'
+import PinkStar from '../components/PinkStar'
+import PurpleStar from '../components/PurpleStar'
+import GrayStar from '../components/GrayStar'
 import Loading from '../components/Loading'
 
 function Register() {
@@ -127,6 +131,11 @@ function Register() {
         exit={{x: window.innerWidth, transition: { duration: 0.1 }}}
     >
         <section className='registration'>
+            <GrayStar/>
+            <GrayStar id="gray-2"/>
+            <PinkStar/>
+            <PurpleStar/>
+            <WhiteStar/>
             <motion.div 
                 className="image-container"
                 initial={{ x: -200, opacity: 0}}
@@ -203,6 +212,8 @@ function Register() {
             className={`congratulations ${congratulations ? 'shown' : 'hidden'}`}
         >
             <div>
+                <PinkStar/>
+                <PurpleStar/>
                 <div>
                     <img src={successfullyDone} alt="check mark" />
                     <img src={successfulMan} alt="man celebrating successfully registered" />

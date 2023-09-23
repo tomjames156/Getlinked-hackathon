@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import './css/App.css';
 import ScrollToTop from './utils/ScrollToTop';
 import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import AnimatedRoutes from './utils/AnimatedRoutes';
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
         <AnimatedRoutes/>
         <Footer/>
       </Router>
-      <ToastContainer position='top-center' autoClose={5000} theme='dark'/>
+      <ToastContainer position='top-center' autoClose={false} theme='dark'/>
     </>
   );
 }

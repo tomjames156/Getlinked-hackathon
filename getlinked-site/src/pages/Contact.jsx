@@ -6,6 +6,10 @@ import '../css/Contact.css'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Loading from '../components/Loading'
+import WhiteStar from '../components/WhiteStar'
+import PurpleStar from '../components/PurpleStar'
+import PinkStar from '../components/PinkStar'
+import GrayStar from '../components/GrayStar'
 import { toast } from 'react-toastify';
 
 function Contact() {
@@ -79,6 +83,10 @@ function Contact() {
         animate={{width: '100%'}}
         exit={{x: window.innerWidth, transition: { duration: 0.1 }}}
     >
+        <GrayStar/>
+        <PinkStar/>
+        <PurpleStar/>
+        <WhiteStar/>
         <section>
             <div>
                 <motion.h1

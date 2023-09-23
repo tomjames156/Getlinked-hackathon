@@ -1,13 +1,46 @@
+.star {
+  position: absolute;
+  width: 14px;
+}
+
 #register {
   position: relative;
-  margin: 8.855rem 0 3rem 0;
+  margin: 12.855rem 0 3rem 0;
 }
 #register .registration {
   display: grid;
   justify-content: center;
   grid-template-columns: 3fr 7fr;
   column-gap: 4rem;
-  margin: 0 4rem 0 4rem;
+  padding: 0 4rem;
+  position: relative;
+}
+#register .registration .star {
+  z-index: 1;
+}
+#register .registration #pink-1 {
+  top: 1rem;
+  left: 2rem;
+  width: 18px;
+}
+#register .registration #gray-1 {
+  bottom: 1rem;
+  left: 4rem;
+  width: 20px;
+}
+#register .registration #purple-1 {
+  bottom: 6rem;
+  left: 30%;
+  width: 18px;
+}
+#register .registration #gray-2 {
+  top: 2rem;
+  right: 20%;
+  width: 20px;
+}
+#register .registration #white-1 {
+  bottom: -1.25rem;
+  right: 10%;
 }
 #register .registration .text-container {
   flex: 6fr;
@@ -128,10 +161,21 @@
   justify-content: center;
   text-align: center;
   transition: all ease 500ms;
+  padding: 4rem 0;
+  z-index: 3;
+}
+#register .congratulations #purple-1 {
+  top: -2rem;
+  right: 22%;
+}
+#register .congratulations #pink-1 {
+  bottom: 1rem;
+  right: 25%;
 }
 #register .congratulations > div {
   padding: 4rem;
   border: solid 1px #D434FE;
+  border-radius: 0.3125rem;
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
