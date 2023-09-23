@@ -1,9 +1,11 @@
 import linkedin from '../assets/icons/linkedin.svg'
 import instagram from '../assets/icons/instagram.svg'
 import x from '../assets/icons/x.svg'
+import xMark from '../assets/icons/xmark.svg'
 import facebook from '../assets/icons/facebook.svg'
 import '../css/Contact.css'
 import { useState } from 'react'
+import { useNavigate} from 'react-router-dom'
 import { motion } from 'framer-motion'
 import Loading from '../components/Loading'
 import WhiteStar from '../components/WhiteStar'
@@ -20,6 +22,7 @@ function Contact() {
         message: '' 
     })
     const [isLoading, setIsLoading] = useState(false)
+    const navigate = useNavigate()
 
     const { first_name, email, message } = formData
 
@@ -83,6 +86,9 @@ function Contact() {
         animate={{width: '100%'}}
         exit={{x: window.innerWidth, transition: { duration: 0.1 }}}
     >
+        <div className='back-btn' onClick={() => {navigate(-1)}}>
+            <i class="fa-solid fa-chevron-left fa-lg"></i>
+        </div>
         <GrayStar/>
         <PinkStar/>
         <PurpleStar/>

@@ -9,6 +9,23 @@
   font-family: Montserrat, sans-serif;
   position: relative;
 }
+#contact .back-btn {
+  background: linear-gradient(270deg, #903AFF 0%, #D434FE 100%);
+  display: none;
+  width: fit-content;
+  padding: 2px;
+  height: 100%;
+  border: solid 1px #D434FE;
+  border-radius: 50%;
+  margin-left: 2rem;
+  margin-bottom: 5rem;
+}
+#contact .back-btn i {
+  padding: 1.5rem 1.25rem;
+  border-radius: 50%;
+  background: #150E28;
+  color: white;
+}
 #contact #pink-1 {
   top: 8rem;
   left: 6rem;
@@ -209,6 +226,10 @@
     height: fit-content;
     font-family: Montserrat, sans-serif;
     position: relative;
+  }
+  #contact .back-btn {
+    background: linear-gradient(270deg, #903AFF 0%, #D434FE 100%);
+    display: flex;
   }
   #contact #pink-1 {
     top: 8rem;
