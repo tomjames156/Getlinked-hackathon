@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.8cd6eb23.css",
-    "main.js": "/static/js/main.a1dd38d1.js",
+    "main.css": "/static/css/main.89c61e1e.css",
+    "main.js": "/static/js/main.4e1c714f.js",
     "static/js/787.bef65afc.chunk.js": "/static/js/787.bef65afc.chunk.js",
     "static/media/man-wearing-smart-glasses-touching-virtual-screen 1.png": "/static/media/man-wearing-smart-glasses-touching-virtual-screen 1.3b8ef37f5cd31913ebe4.png",
     "static/media/Image 1.png": "/static/media/Image 1.0c0f00306bf3959e8fea.png",
@@ -36,12 +36,12 @@
     "static/media/x.svg": "/static/media/x.c60bc8210454c561ba6f1faff6dff442.svg",
     "static/media/facebook.svg": "/static/media/facebook.a4c5f201746dc68d159a76b172296a7f.svg",
     "static/media/checkmark.svg": "/static/media/checkmark.5b220b642c5c9d3016d56135955ca8cc.svg",
-    "main.8cd6eb23.css.map": "/static/css/main.8cd6eb23.css.map",
-    "main.a1dd38d1.js.map": "/static/js/main.a1dd38d1.js.map",
+    "main.89c61e1e.css.map": "/static/css/main.89c61e1e.css.map",
+    "main.4e1c714f.js.map": "/static/js/main.4e1c714f.js.map",
     "787.bef65afc.chunk.js.map": "/static/js/787.bef65afc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8cd6eb23.css",
-    "static/js/main.a1dd38d1.js"
+    "static/css/main.89c61e1e.css",
+    "static/js/main.4e1c714f.js"
   ]
 }

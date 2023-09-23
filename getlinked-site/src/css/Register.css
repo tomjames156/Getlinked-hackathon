@@ -5,7 +5,8 @@
 
 #register {
   position: relative;
-  margin: 12.855rem 0 3rem 0;
+  margin: 5.855rem 0 3rem 0;
+  padding-top: 5rem;
 }
 #register .registration {
   display: grid;
