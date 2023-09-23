@@ -27,7 +27,7 @@ function Register() {
     })
     const [isLoading, setIsLoading] = useState(false)
 
-    const [congratulations, setCongratulations] = useState(true) 
+    const [congratulations, setCongratulations] = useState(false) 
 
     const { team_name, phone_number, email, project_topic, category, group_size, privacy_poclicy_accepted } = formData
 

@@ -540,6 +540,7 @@
   #register .registration .image-container {
     flex: 4fr;
     width: 4fr;
+    overflow: hidden;
   }
   #register .registration .image-container img {
     width: 100%;

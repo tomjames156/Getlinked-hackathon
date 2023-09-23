@@ -13,7 +13,7 @@ function Sponsors() {
             <motion.img
                 src={libertyWhiteLogo}
                 alt="liberty assured company"
-                initial={{ x: -200, opacity: 0}}
+                initial={{ x: -100, opacity: 0}}
                 whileInView={{ x: 0, opacity: 1, transition: { duration: 0.5 }}}
                 viewport={{once: true, amount: 0.1 }}
             />
@@ -44,7 +44,7 @@ function Sponsors() {
             <motion.img
                 src={wisperLogo}
                 alt="wisper sms"
-                initial={{ x: -200, opacity: 0}}
+                initial={{ x: -100, opacity: 0}}
                 whileInView={{ x: 0, opacity: 1, transition: { duration: 0.5 }}}
                 viewport={{once: true, amount: 0.1 }}
             />
@@ -64,7 +64,7 @@ function Sponsors() {
             <motion.img
                 src={vuzualPlusLogo}
                 alt="vuzual plus design studios"
-                initial={{ x: 200, opacity: 0}}
+                initial={{ x: 100, opacity: 0}}
                 whileInView={{ x: 0, opacity: 1, transition: { duration: 0.5 }}}
                 viewport={{once: true, amount: 0.1 }}
             />
