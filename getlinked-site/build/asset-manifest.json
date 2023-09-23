@@ -1,11 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.81b01910.css",
-    "main.js": "/static/js/main.f12c5318.js",
+    "main.css": "/static/css/main.8cd6eb23.css",
+    "main.js": "/static/js/main.a1dd38d1.js",
     "static/js/787.bef65afc.chunk.js": "/static/js/787.bef65afc.chunk.js",
     "static/media/man-wearing-smart-glasses-touching-virtual-screen 1.png": "/static/media/man-wearing-smart-glasses-touching-virtual-screen 1.3b8ef37f5cd31913ebe4.png",
     "static/media/Image 1.png": "/static/media/Image 1.0c0f00306bf3959e8fea.png",
     "static/media/cwok_casual_21 1.png": "/static/media/cwok_casual_21 1.29596cc7df39c06d470a.png",
+    "static/media/circle.png": "/static/media/circle.43b7807a52b019c90e96.png",
+    "static/media/lens_flare_intro_left.png": "/static/media/lens_flare_intro_left.f55e4e752bfac5164b8f.png",
+    "static/media/lens_flare_circle.png": "/static/media/lens_flare_circle.12ef2b57cb85bc4fb6c3.png",
     "static/media/8046554 1.png": "/static/media/8046554 1.5aacf311539614d532f0.png",
     "static/media/graphic-designer.png": "/static/media/graphic-designer.187e69b86ad4087af597.png",
     "static/media/7450159 1.png": "/static/media/7450159 1.7739452f628828b1da65.png",
@@ -17,10 +20,12 @@
     "static/media/the big idea 1.png": "/static/media/the big idea 1.29e903cafcb37cc71b45.png",
     "static/media/bronze_medal.png": "/static/media/bronze_medal.2ced642c0ef5da6c17d6.png",
     "static/media/silver_medal.png": "/static/media/silver_medal.d8a71ed0231b7f734f05.png",
+    "static/media/Ellipse 1.png": "/static/media/Ellipse 1.1c95338322bef3e38f61.png",
     "static/media/instagram.svg": "/static/media/instagram.84ece59782d77b9da95e55eb433dee4a.svg",
     "static/media/phone.svg": "/static/media/phone.9836fe00e6090fc208f93083c49d2567.svg",
     "index.html": "/index.html",
     "static/media/bars.svg": "/static/media/bars.977e9c1666dab0144a8ca3def00a924d.svg",
+    "static/media/security.svg": "/static/media/security.c2c6c2d239061767d70e.svg",
     "static/media/xmark.svg": "/static/media/xmark.d008e88ca2a099a3474c02a70feb4fb7.svg",
     "static/media/location-marker.svg": "/static/media/location-marker.bd1e287ed4392ea5358bbda8eff79465.svg",
     "static/media/linkedin.svg": "/static/media/linkedin.70b9e0cd4bc53f2aaded3d03c4482f8d.svg",
@@ -31,12 +36,12 @@
     "static/media/x.svg": "/static/media/x.c60bc8210454c561ba6f1faff6dff442.svg",
     "static/media/facebook.svg": "/static/media/facebook.a4c5f201746dc68d159a76b172296a7f.svg",
     "static/media/checkmark.svg": "/static/media/checkmark.5b220b642c5c9d3016d56135955ca8cc.svg",
-    "main.81b01910.css.map": "/static/css/main.81b01910.css.map",
-    "main.f12c5318.js.map": "/static/js/main.f12c5318.js.map",
+    "main.8cd6eb23.css.map": "/static/css/main.8cd6eb23.css.map",
+    "main.a1dd38d1.js.map": "/static/js/main.a1dd38d1.js.map",
     "787.bef65afc.chunk.js.map": "/static/js/787.bef65afc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.81b01910.css",
-    "static/js/main.f12c5318.js"
+    "static/css/main.8cd6eb23.css",
+    "static/js/main.a1dd38d1.js"
   ]
 }
