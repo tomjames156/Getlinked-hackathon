@@ -75,14 +75,34 @@
 }
 #register .registration .text-container form .inputs {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  grid-template-areas: "team_name phone" "email topic" "category size";
   column-gap: 1rem;
   row-gap: 1rem;
+}
+#register .registration .text-container form .inputs > .team_name {
+  grid-area: team_name;
+}
+#register .registration .text-container form .inputs > .phone_number {
+  grid-area: phone;
+}
+#register .registration .text-container form .inputs > .email {
+  grid-area: email;
+}
+#register .registration .text-container form .inputs > .project_topic {
+  grid-area: topic;
+}
+#register .registration .text-container form .inputs > .category {
+  grid-area: category;
+}
+#register .registration .text-container form .inputs > .group_size {
+  grid-area: size;
 }
 #register .registration .text-container form .inputs > div {
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
+  width: 100%;
 }
 #register .registration .text-container form .inputs > div input, #register .registration .text-container form .inputs > div select {
   font-family: Montserrat, sans-serif;
@@ -143,8 +163,14 @@
   margin-top: 0.5rem;
 }
 #register .registration .image-container {
-  flex: 4fr;
   width: 4fr;
+  padding-top: 1rem;
+}
+#register .registration .image-container h1 {
+  color: #D434FE;
+  font-family: Clash Display, sans-serif;
+  font-size: 3rem;
+  display: none;
 }
 #register .registration .image-container img {
   width: 100%;
@@ -216,6 +242,470 @@
   opacity: 1;
   transform: translateY(0);
   pointer-events: default;
+}
+
+@media screen and (max-width: 1160px) {
+  #register {
+    position: relative;
+    margin: 12.855rem 0 3rem 0;
+  }
+  #register .registration {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 3fr 7fr;
+    column-gap: 4rem;
+    padding: 0 4rem;
+    position: relative;
+  }
+  #register .registration .star {
+    z-index: 1;
+  }
+  #register .registration #pink-1 {
+    top: 1rem;
+    left: 2rem;
+    width: 18px;
+  }
+  #register .registration #gray-1 {
+    bottom: 1rem;
+    left: 4rem;
+    width: 20px;
+  }
+  #register .registration #purple-1 {
+    bottom: 6rem;
+    left: 30%;
+    width: 18px;
+  }
+  #register .registration #gray-2 {
+    top: 2rem;
+    right: 20%;
+    width: 20px;
+  }
+  #register .registration #white-1 {
+    bottom: -1.25rem;
+    right: 10%;
+  }
+  #register .registration .text-container {
+    flex: 6fr;
+    max-width: 6fr;
+    border-radius: 0.75rem;
+    background: rgba(255, 255, 255, 0.03);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+  }
+  #register .registration .text-container h1 {
+    color: #D434FE;
+    font-family: Clash Display, sans-serif;
+    font-size: 3rem;
+  }
+  #register .registration .text-container p, #register .registration .text-container label {
+    font-size: 1rem;
+    font-family: Montserrat, sans-serif;
+    color: white;
+  }
+  #register .registration .text-container h2 {
+    font-family: Montserrat, sans-serif;
+    font-size: 2rem;
+    color: white;
+  }
+  #register .registration .text-container form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  #register .registration .text-container form .inputs {
+    grid-template-areas: "team_name team_name" "phone phone" "email email" "topic topic" "category size";
+  }
+  #register .registration .text-container form .inputs > div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  #register .registration .text-container form .inputs > div input, #register .registration .text-container form .inputs > div select {
+    font-family: Montserrat, sans-serif;
+    font-size: 1rem;
+    padding: 1rem;
+    color: white;
+    border-radius: 0.25rem;
+    border: 1px solid #FFF;
+    background: rgba(255, 255, 255, 0.03);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+  #register .registration .text-container form .inputs > div select {
+    appearance: none;
+    -webkit-appearance: none;
+    position: relative !important;
+    background-image: url("../assets/icons/caret-down-svgrepo-com.svg");
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 1rem) center;
+  }
+  #register .registration .text-container form .inputs > div select option {
+    background: #150E28;
+    padding: 1rem;
+    color: white;
+  }
+  #register .registration .text-container form .inputs > div input::placeholder,
+#register .registration .text-container form .inputs > div textarea::placeholder,
+#register .registration .text-container form .inputs > div select::placeholder {
+    color: rgba(255, 255, 255, 0.25);
+    min-width: 100%;
+    font-family: Montserrat, sans-serif;
+  }
+  #register .registration .text-container form span {
+    font-family: Montserrat, sans-serif;
+    font-size: 0.85rem;
+    font-style: italic;
+  }
+  #register .registration .text-container form .agreement {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+  }
+  #register .registration .text-container form .agreement span {
+    width: 10px;
+    height: 10px;
+    background: white;
+  }
+  #register .registration .text-container form .agreement img {
+    width: 13px;
+    height: 13px;
+  }
+  #register .registration .text-container form .agreement label {
+    font-size: 0.85rem;
+  }
+  #register .registration .text-container form button {
+    align-self: center;
+    width: fit-content;
+    margin-top: 0.5rem;
+  }
+  #register .registration .image-container {
+    flex: 4fr;
+    width: 4fr;
+  }
+  #register .registration .image-container img {
+    width: 100%;
+    height: auto;
+  }
+  #register .shown {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: default;
+  }
+}
+@media screen and (max-width: 850px) {
+  #register {
+    position: relative;
+    margin: 12.855rem 0 3rem 0;
+  }
+  #register .registration {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    column-gap: 4rem;
+    padding: 0 2rem;
+    position: relative;
+  }
+  #register .registration .star {
+    z-index: 1;
+  }
+  #register .registration #pink-1 {
+    top: 1rem;
+    left: 2rem;
+    width: 18px;
+  }
+  #register .registration #gray-1 {
+    bottom: 1rem;
+    left: 4rem;
+    width: 20px;
+  }
+  #register .registration #purple-1 {
+    bottom: 6rem;
+    left: 30%;
+    width: 18px;
+  }
+  #register .registration #gray-2 {
+    top: 2rem;
+    right: 20%;
+    width: 20px;
+  }
+  #register .registration #white-1 {
+    bottom: -1.25rem;
+    right: 10%;
+  }
+  #register .registration .image-container h1 {
+    display: inline;
+  }
+  #register .registration .text-container {
+    flex: 6fr;
+    max-width: 6fr;
+    background: transparent;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+  }
+  #register .registration .text-container h1 {
+    color: #D434FE;
+    font-family: Clash Display, sans-serif;
+    font-size: 3rem;
+    display: none;
+  }
+  #register .registration .text-container p, #register .registration .text-container label {
+    font-size: 1rem;
+    font-family: Montserrat, sans-serif;
+    color: white;
+  }
+  #register .registration .text-container h2 {
+    font-family: Montserrat, sans-serif;
+    font-size: 2rem;
+    color: white;
+  }
+  #register .registration .text-container form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    width: 100%;
+  }
+  #register .registration .text-container form .inputs {
+    grid-template-areas: "team_name team_name" "phone phone" "email email" "topic topic" "category size";
+    align-items: end;
+  }
+  #register .registration .text-container form .inputs > div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  #register .registration .text-container form .inputs > div input, #register .registration .text-container form .inputs > div select {
+    font-family: Montserrat, sans-serif;
+    font-size: 1rem;
+    padding: 1rem;
+    color: white;
+    border-radius: 0.25rem;
+    border: 1px solid #FFF;
+    background: rgba(255, 255, 255, 0.03);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+  #register .registration .text-container form .inputs > div select {
+    appearance: none;
+    -webkit-appearance: none;
+    position: relative !important;
+    background-image: url("../assets/icons/caret-down-svgrepo-com.svg");
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 1rem) center;
+  }
+  #register .registration .text-container form .inputs > div select option {
+    background: #150E28;
+    padding: 1rem;
+    color: white;
+  }
+  #register .registration .text-container form .inputs > div input::placeholder,
+#register .registration .text-container form .inputs > div textarea::placeholder,
+#register .registration .text-container form .inputs > div select::placeholder {
+    color: rgba(255, 255, 255, 0.25);
+    min-width: 100%;
+    font-family: Montserrat, sans-serif;
+  }
+  #register .registration .text-container form span {
+    font-family: Montserrat, sans-serif;
+    font-size: 0.85rem;
+    font-style: italic;
+  }
+  #register .registration .text-container form .agreement {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+  }
+  #register .registration .text-container form .agreement span {
+    width: 10px;
+    height: 10px;
+    background: white;
+  }
+  #register .registration .text-container form .agreement img {
+    width: 13px;
+    height: 13px;
+  }
+  #register .registration .text-container form .agreement label {
+    font-size: 0.85rem;
+  }
+  #register .registration .text-container form button {
+    align-self: center;
+    width: fit-content;
+    margin-top: 0.5rem;
+  }
+  #register .registration .image-container {
+    flex: 4fr;
+    width: 4fr;
+  }
+  #register .registration .image-container img {
+    width: 100%;
+    height: auto;
+  }
+  #register .shown {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: default;
+  }
+}
+@media screen and (max-width: 390px) {
+  #register {
+    position: relative;
+    margin: 12.855rem 0 3rem 0;
+  }
+  #register .registration {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    column-gap: 4rem;
+    padding: 0;
+    position: relative;
+  }
+  #register .registration .star {
+    z-index: 1;
+  }
+  #register .registration #pink-1 {
+    top: 1rem;
+    left: 2rem;
+    width: 18px;
+    z-index: -1;
+  }
+  #register .registration #gray-1 {
+    bottom: 1rem;
+    left: 4rem;
+    width: 20px;
+  }
+  #register .registration #purple-1 {
+    bottom: 6rem;
+    left: 30%;
+    width: 18px;
+    z-index: -1;
+  }
+  #register .registration #gray-2 {
+    top: 2rem;
+    right: 20%;
+    width: 20px;
+  }
+  #register .registration #white-1 {
+    bottom: -1.25rem;
+    right: 10%;
+  }
+  #register .registration .image-container h1 {
+    display: inline;
+  }
+  #register .registration .text-container {
+    flex: 6fr;
+    max-width: 6fr;
+    background: transparent;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+  }
+  #register .registration .text-container h1 {
+    color: #D434FE;
+    font-family: Clash Display, sans-serif;
+    font-size: 3rem;
+    display: none;
+  }
+  #register .registration .text-container p, #register .registration .text-container label {
+    font-size: 1rem;
+    font-family: Montserrat, sans-serif;
+    color: white;
+  }
+  #register .registration .text-container h2 {
+    font-family: Montserrat, sans-serif;
+    font-size: 2rem;
+    color: white;
+  }
+  #register .registration .text-container form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  #register .registration .text-container form .inputs {
+    grid-template-areas: "team_name" "phone" "email" "topic" "category" "size";
+  }
+  #register .registration .text-container form .inputs > div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  #register .registration .text-container form .inputs > div input, #register .registration .text-container form .inputs > div select {
+    font-family: Montserrat, sans-serif;
+    font-size: 1rem;
+    padding: 1rem;
+    color: white;
+    border-radius: 0.25rem;
+    border: 1px solid #FFF;
+    background: rgba(255, 255, 255, 0.03);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+  #register .registration .text-container form .inputs > div select {
+    appearance: none;
+    -webkit-appearance: none;
+    position: relative !important;
+    background-image: url("../assets/icons/caret-down-svgrepo-com.svg");
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 1rem) center;
+  }
+  #register .registration .text-container form .inputs > div select option {
+    background: #150E28;
+    padding: 1rem;
+    color: white;
+  }
+  #register .registration .text-container form .inputs > div input::placeholder,
+#register .registration .text-container form .inputs > div textarea::placeholder,
+#register .registration .text-container form .inputs > div select::placeholder {
+    color: rgba(255, 255, 255, 0.25);
+    min-width: 100%;
+    font-family: Montserrat, sans-serif;
+  }
+  #register .registration .text-container form span {
+    font-family: Montserrat, sans-serif;
+    font-size: 0.85rem;
+    font-style: italic;
+  }
+  #register .registration .text-container form .agreement {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+  }
+  #register .registration .text-container form .agreement span {
+    width: 10px;
+    height: 10px;
+    background: white;
+  }
+  #register .registration .text-container form .agreement img {
+    width: 13px;
+    height: 13px;
+  }
+  #register .registration .text-container form .agreement label {
+    font-size: 0.85rem;
+  }
+  #register .registration .text-container form button {
+    align-self: center;
+    width: fit-content;
+    margin-top: 0.5rem;
+  }
+  #register .registration .image-container {
+    flex: 4fr;
+    width: 4fr;
+  }
+  #register .registration .image-container img {
+    width: 100%;
+    height: auto;
+  }
+  #register .shown {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: default;
+  }
 }
 
 /*# sourceMappingURL=Register.css.map */

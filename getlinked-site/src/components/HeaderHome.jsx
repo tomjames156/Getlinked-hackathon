@@ -20,7 +20,7 @@ function HeaderHome() {
     }
 
   return (
-    <nav className={isOpen}>
+    <nav style={{borderBottom: "solid 1px #FFFFFF2E"}} className={isOpen}>
         <div>
             <Link onClick={closeMenu} to='/' className="company-name"><span>get</span><span>linked</span></Link>
             <div className="mobile-nav">

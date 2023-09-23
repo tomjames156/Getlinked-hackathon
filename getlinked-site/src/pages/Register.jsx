@@ -27,7 +27,7 @@ function Register() {
     })
     const [isLoading, setIsLoading] = useState(false)
 
-    const [congratulations, setCongratulations] = useState(false) 
+    const [congratulations, setCongratulations] = useState(true) 
 
     const { team_name, phone_number, email, project_topic, category, group_size, privacy_poclicy_accepted } = formData
 
@@ -142,6 +142,7 @@ function Register() {
                 whileInView={{ x: 0, opacity: 1, transition: { duration: 0.5 }}}
                 viewport={{once: true, amount: 0.1 }}
             >
+                <h1>Register</h1>
                 <img src={manSittingThumbsUp} alt="animated man sitting at a desk showing thumbs up" />
             </motion.div>
             <motion.div 
@@ -155,23 +156,23 @@ function Register() {
                 <h2>CREATE YOUR ACCOUNT</h2>
                 <form onSubmit={onSubmit}>
                     <div className="inputs">
-                        <div>
+                        <div className='team_name'>
                             <label htmlFor="team_name">Team's name</label>
                             <input name="team_name" id="team_name" type="text" onChange={onChange} value={team_name || ''} placeholder='Enter the name of your group'/>
                         </div>
-                        <div>
+                        <div className='phone_number'>
                             <label htmlFor="phone_number">Phone</label>
                             <input name='phone_number' id='phone_number' type="text" onChange={onChange} value={phone_number || ''} placeholder='Enter your phone number'/>
                         </div>
-                        <div>
+                        <div className='email'>
                             <label htmlFor="email">Email</label>
                             <input name='email' id='email' type="email" onChange={onChange} value={email || ''} placeholder='Enter your email address'/>
                         </div>
-                        <div>
+                        <div className='project_topic'>
                             <label htmlFor="project_topic">Project Topic</label>
                             <input name="project_topic" id='project_topic' type="text" onChange={onChange} value={project_topic || ''} placeholder='What is your group project topic'/>
                         </div>
-                        <div>
+                        <div className='category'>
                             <label htmlFor="category">Category</label>
                             <select name="category" id="category" onChange={onChange} value={category || ''}>
                                 <option value="">Select your category</option>
@@ -180,7 +181,7 @@ function Register() {
                                 <option value="3">UI/UX</option>
                             </select>
                         </div>
-                        <div>
+                        <div className='group_size'>
                             <label htmlFor="group_size">Group Size</label>
                             <select name="group_size" id="group_size" onChange={onChange} value={group_size || ''}>
                                 <option value="">Select</option>

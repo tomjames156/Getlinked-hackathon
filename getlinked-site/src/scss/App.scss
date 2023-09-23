@@ -17,7 +17,7 @@ nav{
     top: 0;
     left: 0;
     overflow: hidden !important;
-    width: 100%;
+    width: 100vw;
     height: 6.5rem;
     display: flex;
     align-items: center;
@@ -296,8 +296,147 @@ footer{
     }
 }
 
+.Toastify__toast--error {
+    border: 1px solid #EB5757;
+    border-radius: 1rem !important;
+    background: #FAE1E2 !important;
+    padding-right: 2.5rem !important; 
+    font-family: Montserrat, sans-serif !important;
+}
 
-@media screen and (max-width: 550px) {
+.Toastify__toast--error::after {
+    content: url('../assets/icons/xmark_black.svg');
+    position: absolute;
+    font-size: 15px;
+    font-weight: 700;
+    width: 20px;
+    height: 20px;
+    right: 1rem;
+    top: 1rem;
+}
+
+.Toastify__toast--error::before {
+    position:relative; 
+    z-index:100000;
+    left:12px;
+    top:6px;
+}
+
+.Toastify__toast--success {
+    border: 1px solid #3A9EA5 !important;
+    border-radius: 1rem !important;
+    background: #F0F9FA !important;
+    font-family: Montserrat, sans-serif !important;
+    padding-right: 2rem !important;
+}
+
+.Toastify__toast--success::before {
+    position:relative; 
+    z-index:100000;
+    left:12px;
+    top:6px;
+}
+
+.Toastify__toast--success::after {
+    content: url('../assets/icons/xmark_black.svg');
+    position: absolute;
+    font-size: 15px;
+    font-weight: 700;
+    width: 20px;
+    height: 20px;
+    right: 1rem;
+    top: 1rem;
+}
+
+.Toastify__toast--warning {
+    border-radius: 1rem !important;
+    padding-right: 2.5rem !important; 
+    border: 1px solid #E78326  !important;
+    background: #FADFC5 !important;
+    font-family: Montserrat, sans-serif !important;
+}
+
+.Toastify__toast--warning::before {
+    position:relative; 
+    z-index:100000;
+    left:12px;
+    top:6px;
+}  
+
+.Toastify__toast--warning::after {
+    content: url('../assets/icons/xmark_black.svg');
+    position: absolute;
+    font-size: 15px;
+    font-weight: 700;
+    width: 20px;
+    height: 20px;
+    right: 1rem;
+    top: 1rem;
+}
+
+.Toastify__toast-body {
+    color: #444C63    ;
+    font-size: 1rem;
+    padding-left: 20px;
+    line-height: 20px;
+    padding: 0px;
+    padding-top: 25px;
+    width: 100%;
+    font-weight: 400;
+    margin-left: 25px !important;
+    font-family: Montserrat, sans-serif !important;
+} 
+
+.Toastify__toast > button>  svg {
+    display: none;
+}
+
+@media screen and (max-width: 1110px) {
+    nav{
+
+        .links-action-container{
+            column-gap: 4rem;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1000px){
+    nav{
+
+        .links-action-container{
+            column-gap: 4rem;
+
+            .links{
+                display: flex;
+                column-gap: 2rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px){
+    nav{
+
+        .links-action-container{
+            column-gap: 2rem;
+
+            .links{
+                display: flex;
+                column-gap: 1rem;
+            }
+
+            .register{
+
+                button{
+                    padding: 0.55rem 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 780px) {
     nav{
         flex-direction: column;
         justify-content: flex-start;
@@ -461,97 +600,166 @@ footer{
     }
 }
 
-.Toastify__toast--error {
-    border: 1px solid #EB5757;
-    border-radius: 1rem !important;
-    background: #FAE1E2 !important;
-    padding-right: 2.5rem !important; 
-    font-family: Montserrat, sans-serif !important;
-}
+@media screen and (max-width: 500px) {
+    nav{
+        flex-direction: column;
+        justify-content: flex-start;
+        transition: all ease 500ms;  
+        padding: 1rem 2.5rem;    
+        height: 5rem;
+        z-index: 7;
 
-.Toastify__toast--error::after {
-    content: url('../assets/icons/xmark_black.svg');
-    position: absolute;
-    font-size: 15px;
-    font-weight: 700;
-    width: 20px;
-    height: 20px;
-    right: 1rem;
-    top: 1rem;
-}
+        div:nth-of-type(1){
+            .mobile-nav{
+                display: unset;
+        
+                div:nth-of-type(1){
+                    background: $gradient_background;
+                    width: fit-content;
+                    max-height: fit-content;
+                    padding: 1px;
+                    display: none;
+                    align-items: center;
+                    justify-content: center;
+                    max-height: fit-content;
+                    width: fit-content;
+                    border-radius: 100%;
+                    justify-content: center;
+        
+                    .x-mark{
+                        padding: 0.25rem;
+                        border-radius: 100%;
+                        background: black;
+                        height: 1.75rem;
+                    }
+                }
+        
+                div:nth-of-type(2){
+                    background: transparent;
+                    width: fit-content;
+                    max-height: fit-content;
+                    padding: 1px;
+                    border-radius: 0.25rem;
+                    display: flex;
+                    align-items: center;
+        
+                    .bars{
+                        background: $background;
+                        padding: 4px;
+                        border-radius: 0.2rem;
+                        width: 2.5rem;
+                    }
+                }
+        
+                div:nth-of-type(2):hover{
+                    background: $gradient_background;
+        
+                    .bars:hover{
+                        background: $background;
+                        padding: 4px;
+                    }
+                }
+            }
+        }
 
-.Toastify__toast--error::before {
-    position:relative; 
-    z-index:100000;
-    left:12px;
-    top:6px;
-}
+        .links-action-container{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 1.5rem;
+            opacity: 0;
+            transform: translateY(-200px);
+            z-index: 6;
+            
+            .links{
+                flex-direction: column;
+                row-gap: 1.5rem;
+                color: transparent;
+                display: none;
+            }
 
-.Toastify__toast--success {
-    border: 1px solid #3A9EA5 !important;
-    border-radius: 1rem !important;
-    background: #F0F9FA !important;
-    font-family: Montserrat, sans-serif !important;
-    padding-right: 2rem !important;
-}
+            .register{
+                display: none;
+            }
+        }
+    }
 
-.Toastify__toast--success::before {
-    position:relative; 
-    z-index:100000;
-    left:12px;
-    top:6px;
-}
+    nav.mobile-open{
+        transition: all ease 500ms;      
+        border-bottom: none;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 2.5rem;
+        padding: 1rem 2.5rem 5rem 2.5rem;    
+        height: auto;
 
-.Toastify__toast--success::after {
-    content: url('../assets/icons/xmark_black.svg');
-    position: absolute;
-    font-size: 15px;
-    font-weight: 700;
-    width: 20px;
-    height: 20px;
-    right: 1rem;
-    top: 1rem;
-}
+        div:nth-of-type(1){
 
-.Toastify__toast--warning {
-    border-radius: 1rem !important;
-    padding-right: 2.5rem !important; 
-    border: 1px solid #E78326  !important;
-    background: #FADFC5 !important;
-    font-family: Montserrat, sans-serif !important;
-}
+            h1{
+                background: transparent;
+                pointer-events: none;
+                
+                span:nth-of-type(1){
+                    color: transparent
+                }
 
-.Toastify__toast--warning::before {
-    position:relative; 
-    z-index:100000;
-    left:12px;
-    top:6px;
-}  
+                span:nth-of-type(2){
+                    color: transparent
+                }
+            }
 
-.Toastify__toast--warning::after {
-    content: url('../assets/icons/xmark_black.svg');
-    position: absolute;
-    font-size: 15px;
-    font-weight: 700;
-    width: 20px;
-    height: 20px;
-    right: 1rem;
-    top: 1rem;
-}
+            .mobile-nav{
+                
+        
+                div:nth-of-type(1){
+                    background: $gradient_background;
+                    width: fit-content;
+                    max-height: fit-content;
+                    padding: 1px;
+                    display: flex;
+                }
 
-.Toastify__toast-body {
-    color: #444C63    ;
-    font-size: 1rem;
-    padding-left: 20px;
-    line-height: 20px;
-    padding: 0px;
-    padding-top: 25px;
-    width: 100%;
-    font-weight: 400;
-    margin-left: 25px !important;
-    font-family: Montserrat, sans-serif !important;
-} 
+                div:nth-of-type(2){
+                    display: none;
+                }
+            }
+        }
 
-.Toastify__toast > button>  svg {
-    display: none;
+        .links-action-container{
+            opacity: 1;
+            transform: translateY(0);
+
+            .links{
+                display: flex;
+            }
+
+            .register{
+                display: unset;
+            }
+        }
+    }
+
+    footer{
+        padding: 4rem 1.5rem 1.5rem 1.5rem;
+
+        .content{
+            display: grid;
+            grid-template-columns: 1fr;
+            row-gap: 2rem;
+
+            .about-summary{
+                display: flex;
+                flex-direction: column;
+                row-gap: 2rem;
+            }
+
+            .useful-links{
+                padding-top: 0;
+            }
+
+            .contact{
+                padding-top: 0;
+            }
+        }
+    }
 }
