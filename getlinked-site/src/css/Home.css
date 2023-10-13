@@ -672,9 +672,6 @@ main {
   width: auto;
   height: auto;
 }
-.partners-sponsors .sponsors .sponsor img:nth-of-type(2) {
-  display: none;
-}
 .partners-sponsors .sponsors .sponsor .paybox-logo {
   font-family: Typo Hoop Demo, sans-serif;
   font-size: 3rem;

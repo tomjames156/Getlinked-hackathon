@@ -21,25 +21,11 @@ function Sponsors() {
                     whileInView={{ x: 0, opacity: 1, transition: { duration: 0.5 }}}
                     viewport={{once: true, amount: 0.1 }}
                 />
-                <motion.img
-                    src={libertyAssuredMobile}
-                    alt="liberty assured company"
-                    initial={{ x: -100, opacity: 0}}
-                    whileInView={{ x: 0, opacity: 1, transition: { duration: 0.5 }}}
-                    viewport={{once: true, amount: 0.1 }}
-                />
             </div>
             <hr className='hr1'/>
             <div className='sponsor sponsor2'>
                 <motion.img
                     src={libertyPayLogo}
-                    alt="liberty pay company"
-                    initial={{ opacity: 0}}
-                    whileInView={{opacity: 1, transition: { duration: 0.5 }}}
-                    viewport={{once: true, amount: 0.1 }}
-                />
-                <motion.img
-                    src={libertyPayMobile}
                     alt="liberty pay company"
                     initial={{ opacity: 0}}
                     whileInView={{opacity: 1, transition: { duration: 0.5 }}}
@@ -57,25 +43,11 @@ function Sponsors() {
                     whileInView={{ y: 0, opacity: 1, transition: { duration: 0.5 }}}
                     viewport={{once: true, amount: 0.1 }}
                 />
-                <motion.img
-                    src={winwiseMobile}
-                    alt="winwise company"
-                    initial={{ y: -150, opacity: 0}}
-                    whileInView={{ y: 0, opacity: 1, transition: { duration: 0.5 }}}
-                    viewport={{once: true, amount: 0.1 }}
-                />
             </div>
             <hr className='hr2'/>
             <div className='sponsor sponsor4'>
                 <motion.img
                     src={wisperLogo}
-                    alt="wisper sms"
-                    initial={{ x: -100, opacity: 0}}
-                    whileInView={{ x: 0, opacity: 1, transition: { duration: 0.5 }}}
-                    viewport={{once: true, amount: 0.1 }}
-                />
-                <motion.img
-                    src={wisperMobile}
                     alt="wisper sms"
                     initial={{ x: -100, opacity: 0}}
                     whileInView={{ x: 0, opacity: 1, transition: { duration: 0.5 }}}
@@ -97,13 +69,6 @@ function Sponsors() {
             <div className='sponsor sponsor6'>
                 <motion.img
                     src={vuzualPlusLogo}
-                    alt="vuzual plus design studios"
-                    initial={{ x: 100, opacity: 0}}
-                    whileInView={{ x: 0, opacity: 1, transition: { duration: 0.5 }}}
-                    viewport={{once: true, amount: 0.1 }}
-                />
-                <motion.img
-                    src={vuzualPlusMobile}
                     alt="vuzual plus design studios"
                     initial={{ x: 100, opacity: 0}}
                     whileInView={{ x: 0, opacity: 1, transition: { duration: 0.5 }}}
