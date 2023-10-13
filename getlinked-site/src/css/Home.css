@@ -1102,6 +1102,9 @@ main {
     padding-right: 2rem !important;
     padding-left: 2rem !important;
   }
+  .questions .text-container > p {
+    padding-right: 0;
+  }
   .judging {
     grid-template-columns: 1fr;
     padding-right: 2rem !important;
@@ -1491,6 +1494,83 @@ main {
   }
 }
 @media screen and (max-width: 400px) {
+  .prizes {
+    grid-template-columns: 1fr;
+    column-gap: 2rem;
+    padding: 2rem 0rem 2rem 0rem;
+    align-items: flex-end;
+    border: none;
+    background: url("../assets/flares/circle.png"), -204.25px 7px/119.817% 104.852% no-repeat;
+    background-blend-mode: hard-light;
+    background-size: 900px auto;
+    background-position: left -100px bottom -100px;
+    position: relative;
+    width: 100%;
+  }
+  .prizes #white-1 {
+    left: 20%;
+    bottom: 8rem;
+  }
+  .prizes #white-2 {
+    left: 51%;
+    top: 18rem;
+  }
+  .prizes #white-3 {
+    right: 3.5rem;
+    top: 25rem;
+  }
+  .prizes #purple-1 {
+    left: 20%;
+    top: 4rem;
+  }
+  .prizes #gray-1 {
+    right: 19%;
+    bottom: 4rem;
+  }
+  .prizes .text-container {
+    flex: 40%;
+    align-items: center;
+    justify-content: center;
+  }
+  .prizes .text-container > div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  .prizes .text-container > div p {
+    width: auto;
+  }
+  .prizes .text-container .rewards {
+    display: grid;
+    row-gap: 5rem;
+    column-gap: 0.5rem;
+    padding-top: 15rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "first first" "second third";
+  }
+  .prizes .text-container .rewards li > div {
+    padding: 4rem 1rem 1rem 1rem;
+  }
+  .prizes .text-container .rewards > #second {
+    grid-area: second;
+  }
+  .prizes .text-container .rewards > #third {
+    grid-area: third;
+  }
+  .prizes .text-container .rewards > #first {
+    grid-area: first;
+    border: 1px solid #903AFF;
+  }
+  .prizes .image-container {
+    flex: 60%;
+    padding-bottom: 3rem;
+    width: 100%;
+  }
+  .prizes .image-container img {
+    width: 100%;
+    height: auto;
+  }
   .partners-sponsors .sponsors {
     padding: 2rem 1rem;
     grid-template-columns: 1fr 1.5rem 1fr 1.5rem 1fr;
