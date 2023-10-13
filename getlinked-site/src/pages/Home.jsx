@@ -86,8 +86,8 @@ function Home() {
                     <img src={lightBulb} alt="light bulb" />
                 </motion.div>
                 <div>
-                    {/* <img src={boyUsingVr} alt="boy using VR" />
-                    <img className='ball' src={glitteryBall} alt="shiny ball" /> */}
+                    <img src={boyUsingVr} alt="boy using VR" />
+                    <img className='ball' src={glitteryBall} alt="shiny ball" />
                 </div>
             </div>
         </section>
